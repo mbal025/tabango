@@ -1,0 +1,2611 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title id="pageTitle">SOLE & CO | Premium Koleksiyon</title>
+  <meta name="facebook-domain-verification" content="ltt9dng4fc87p9kbup0aqdu0o2khf8" />
+  
+  <!-- Google Fonts: Inter + Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script>
+    let FB_PIXEL_ID = '1530551358450253'; 
+    window.TT_PIXEL_ID = '';
+  
+    window.addEventListener('DOMContentLoaded', async () => {
+      try {
+        const { initializeApp } = await import("https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js");
+        const { getFirestore, doc, getDoc } = await import("https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js");
+        
+const firebaseConfig = {
+  apiKey: "AIzaSyAKMJnXDzKytUnJpgJnEJ9IqLGHYSbv_Qc",
+  authDomain: "tekyaprak-716da.firebaseapp.com",
+  projectId: "tekyaprak-716da",
+  storageBucket: "tekyaprak-716da.firebasestorage.app",
+  messagingSenderId: "398706872594",
+  appId: "1:398706872594:web:6aadfce2953cf29ed7e3cb"
+};
+        
+        const app = initializeApp(firebaseConfig, 'pixelApp');
+        const db = getFirestore(app);
+        
+        const settingsDoc = await getDoc(doc(db, "settings", "siteConfig"));
+        if (settingsDoc.exists()) {
+          const settings = settingsDoc.data();
+          
+          const dynamicFbId = settings.facebookPixelId || settings['cfg-facebookPixelId'];
+          if (dynamicFbId) FB_PIXEL_ID = dynamicFbId;
+          
+          const dynamicTtId = settings.tiktokPixelId || settings['cfg-tiktokPixelId'];
+          if (dynamicTtId) window.TT_PIXEL_ID = dynamicTtId;
+        }
+
+        if (FB_PIXEL_ID) {
+          const noscriptEl = document.getElementById('fb-noscript');
+          if (noscriptEl) {
+            const imgEl = document.createElement('img');
+            imgEl.height = '1';
+            imgEl.width = '1';
+            imgEl.style.display = 'none';
+            imgEl.src = `https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`;
+            noscriptEl.innerHTML = '';
+            noscriptEl.appendChild(imgEl);
+          }
+          
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          
+          fbq('init', FB_PIXEL_ID);
+          fbq('track', 'PageView');
+        }
+
+        if (window.TT_PIXEL_ID) {
+          !function (w, d, t) {
+            w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"];ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e};ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=i+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+          }(window, document, 'ttq');
+
+          ttq.load(window.TT_PIXEL_ID);
+          ttq.page();
+        }
+      } catch (error) {
+        console.error('Pixel yüklenirken hata:', error);
+      }
+    });
+  </script>
+  <noscript id="fb-noscript">
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1&ev=PageView&noscript=1"/>
+  </noscript>
+  <style>
+    :root {
+      /* Dark Luxury Palette */
+      --bg-base: #0a0a0f;
+      --bg-surface: #14141e;
+      --bg-surface-elevated: #1e1e2e;
+      --bg-accent: rgba(212, 175, 55, 0.08);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-focus: rgba(212, 175, 55, 0.6);
+      
+      --text-primary: #ffffff;
+      --text-secondary: #a0a0b0;
+      --text-muted: #646474;
+      --text-accent: #d4af37;
+      --text-glow: rgba(212, 175, 55, 0.4);
+      
+      --accent-gold: #d4af37;
+      --accent-gold-hover: #e6c055;
+      --accent-electric: #00d4ff;
+      --accent-electric-glow: rgba(0, 212, 255, 0.3);
+      --accent-danger: #ff4d6a;
+      --accent-success: #00e676;
+      
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
+      --shadow-glow: 0 0 20px rgba(212, 175, 55, 0.25);
+      
+      --radius-xs: 4px;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --radius-full: 9999px;
+      
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-heading: 'Manrope', 'Inter', sans-serif;
+      
+      --transition-fast: 150ms ease;
+      --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg-base);
+      font-family: var(--font-body);
+      color: var(--text-primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding-bottom: 100px;
+      line-height: 1.5;
+      background-image: 
+        radial-gradient(ellipse at top, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+        radial-gradient(ellipse at bottom right, rgba(0, 212, 255, 0.02) 0%, transparent 50%);
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
+
+    /* Typography */
+    .font-heading { font-family: var(--font-heading); }
+    .text-gradient-gold {
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-hover));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .text-gradient-electric {
+      background: linear-gradient(135deg, var(--accent-electric), #7df9ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .text-glow { text-shadow: 0 0 12px var(--text-glow); }
+
+    /* Layout */
+    .container { 
+      max-width: 1200px; 
+      margin: 0 auto; 
+      padding: 0 20px; 
+    }
+    @media (min-width: 768px) {
+      .container { padding: 0 32px; }
+      body { padding-bottom: 120px; }
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 10, 15, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all var(--transition-normal);
+    }
+    .header.scrolled {
+      padding: 10px 20px;
+      background: rgba(10, 10, 15, 0.95);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+    }
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-electric));
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--bg-base);
+      font-size: 20px;
+      font-weight: 800;
+      font-family: var(--font-heading);
+      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    .logo-icon::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.3) 50%, transparent 60%);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+    .logo-container:hover .logo-icon::after {
+      transform: translateX(100%);
+    }
+    
+    .logo-text {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      cursor: pointer;
+      transition: opacity var(--transition-fast);
+    }
+    .logo-text:hover { opacity: 0.9; }
+    
+    .header-badge {
+      font-size: 11px;
+      color: var(--accent-gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: var(--bg-accent);
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .header-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--accent-gold);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(0.8); }
+    }
+    
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+      padding: 10px 20px;
+      border-radius: var(--radius-full);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.25);
+      transition: all var(--transition-normal);
+      border: 1px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-whatsapp::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.5s ease;
+    }
+    .btn-whatsapp:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(37, 211, 102, 0.4);
+      border-color: rgba(255,255,255,0.2);
+    }
+    .btn-whatsapp:hover::before {
+      transform: translateX(100%);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      padding: 48px 20px 32px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.08) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(0, 212, 255, 0.1));
+      color: var(--accent-gold);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 8px 24px;
+      border-radius: var(--radius-full);
+      margin-bottom: 20px;
+      border: 1px solid var(--border-subtle);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-tag::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      animation: shimmer 3s infinite;
+    }
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+    
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(32px, 7vw, 48px);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+    #campaign-desc {
+      font-size: 17px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      font-weight: 400;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* ===== CAMPAIGN BANNER ===== */
+    .campaign-banner {
+      background: linear-gradient(135deg, var(--bg-surface), var(--bg-surface-elevated));
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 32px 28px;
+      margin: 24px auto 32px;
+      max-width: 560px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border-top: 2px solid var(--accent-gold);
+    }
+    .campaign-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+      opacity: 0.6;
+    }
+    
+    .campaign-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-electric));
+      color: var(--bg-base);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      padding: 6px 20px;
+      border-radius: var(--radius-full);
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-glow);
+    }
+    
+    .campaign-price {
+      font-family: var(--font-heading);
+      font-size: 56px;
+      font-weight: 900;
+      line-height: 1;
+      margin: 8px 0 6px;
+      letter-spacing: -2px;
+    }
+    
+    .campaign-subtitle {
+      font-size: 14px;
+      color: var(--text-secondary);
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+    
+    .campaign-stars {
+      color: var(--accent-gold);
+      font-size: 18px;
+      letter-spacing: 4px;
+      text-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+    }
+
+    /* ===== SATISFACTION SLIDER ===== */
+    .satisfaction-slider { 
+      margin: 32px 0 28px; 
+      padding: 0 8px;
+    }
+    .satisfaction-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      padding: 0 8px;
+    }
+    .satisfaction-title {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .satisfaction-badge {
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-electric));
+      color: var(--bg-base);
+      font-size: 10px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: var(--radius-full);
+      letter-spacing: 1px;
+    }
+    
+    .satisfaction-container {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      padding: 4px 4px 16px;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+    }
+    .satisfaction-container::-webkit-scrollbar { display: none; }
+    
+    .satisfaction-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 14px 18px;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: all var(--transition-normal);
+      scroll-snap-align: start;
+      min-width: 84px;
+    }
+    .satisfaction-item:hover {
+      border-color: var(--accent-gold);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .satisfaction-item:active { transform: scale(0.97); }
+    
+    .satisfaction-avatar-wrapper {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      padding: 2px;
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-electric));
+      flex-shrink: 0;
+      position: relative;
+    }
+    .satisfaction-avatar-wrapper::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      padding: 2px;
+      background: linear-gradient(135deg, var(--accent-electric), var(--accent-gold));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+    }
+    .satisfaction-item:hover .satisfaction-avatar-wrapper::after {
+      opacity: 1;
+    }
+    .satisfaction-avatar-wrapper img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--bg-surface);
+    }
+    .satisfaction-avatar-name {
+      color: var(--text-secondary);
+      font-size: 11px;
+      font-weight: 600;
+      max-width: 72px;
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      transition: color var(--transition-fast);
+    }
+    .satisfaction-item:hover .satisfaction-avatar-name {
+      color: var(--accent-gold);
+    }
+
+    /* ===== PRODUCT GRID ===== */
+    .products-section { padding: 16px 0 32px; }
+    .product-grid { 
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 16px; 
+    }
+    @media (min-width: 600px) {
+      .product-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    }
+    
+    .card-light {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      border: 1px solid var(--border-subtle);
+      transition: all var(--transition-normal);
+      position: relative;
+    }
+    .card-light::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius-lg);
+      padding: 1px;
+      background: linear-gradient(45deg, transparent, var(--accent-gold), transparent);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity var(--transition-normal);
+      pointer-events: none;
+    }
+    .card-light:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent-gold);
+      box-shadow: var(--shadow-lg), 0 0 24px rgba(212, 175, 55, 0.15);
+    }
+    .card-light:hover::before { opacity: 1; }
+    
+    .card-img-wrapper {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, var(--bg-surface-elevated), var(--bg-surface));
+      overflow: hidden;
+    }
+    .card-img-wrapper img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+      display: block; 
+      transition: transform 0.5s ease;
+    }
+    .card-light:hover .card-img-wrapper img {
+      transform: scale(1.05);
+    }
+    
+    .badge-hot {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: linear-gradient(135deg, var(--accent-electric), #00a8cc);
+      color: var(--bg-base);
+      font-size: 10px;
+      padding: 5px 12px;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 12px rgba(0, 212, 255, 0.3);
+      z-index: 2;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+    
+    .badge-zoom {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: var(--bg-surface-elevated);
+      padding: 10px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-subtle);
+      opacity: 0;
+      transform: translateY(8px);
+      transition: all var(--transition-normal);
+      z-index: 2;
+    }
+    .card-light:hover .badge-zoom {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .card-content { padding: 18px; display: flex; flex-direction: column; flex: 1; }
+    .card-title {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+      line-height: 1.3;
+      min-height: 42px;
+    }
+    .card-divider { 
+      border: 0; 
+      border-bottom: 1px solid var(--border-subtle); 
+      margin: 0 0 14px 0; 
+    }
+    
+    .variant-label {
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .variant-grid { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 6px; 
+    }
+    .variant-box {
+      background: var(--bg-surface-elevated);
+      border: 1.5px solid var(--border-subtle);
+      color: var(--text-secondary);
+      border-radius: var(--radius-sm);
+      flex-grow: 1;
+      min-width: 32px;
+      padding: 8px 0;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      position: relative;
+      overflow: hidden;
+    }
+    .variant-box::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-electric));
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+      z-index: -1;
+    }
+    .variant-box:hover {
+      border-color: var(--accent-gold);
+      color: var(--text-primary);
+      transform: translateY(-2px);
+    }
+    .variant-box:hover::after { opacity: 0.15; }
+    .variant-box:active { 
+      border-color: var(--accent-gold); 
+      color: var(--bg-base);
+      transform: scale(0.96);
+    }
+    .variant-box:active::after { opacity: 1; }
+
+    /* ===== STICKY BAR ===== */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(20, 20, 30, 0.95);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-top: 1px solid var(--border-subtle);
+      padding: 16px 24px;
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 200;
+      box-shadow: 0 -8px 40px rgba(0,0,0,0.4);
+      animation: slideUp 0.4s ease;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    
+    .sticky-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    #cart-count {
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    #total-price-display {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--accent-gold);
+      text-shadow: 0 0 12px var(--text-glow);
+      font-family: var(--font-heading);
+    }
+    
+    .sticky-btn {
+      background: var(--bg-surface-elevated);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-full);
+      padding: 14px 32px;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all var(--transition-normal);
+      font-family: var(--font-heading);
+      position: relative;
+      overflow: hidden;
+      min-width: 160px;
+      text-align: center;
+    }
+    .sticky-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-electric));
+      opacity: 0;
+      transition: opacity var(--transition-normal);
+      z-index: -1;
+    }
+    .sticky-btn:hover {
+      border-color: var(--accent-gold);
+      color: var(--text-primary);
+      transform: translateY(-2px);
+    }
+    .sticky-btn:hover::before { opacity: 0.1; }
+    
+    .sticky-btn.active {
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-electric));
+      color: var(--bg-base);
+      border: none;
+      box-shadow: 0 8px 32px rgba(212, 175, 55, 0.4);
+      font-weight: 700;
+    }
+    .sticky-btn.active:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(212, 175, 55, 0.6);
+    }
+
+    /* ===== WARNING BANNER ===== */
+    .warning-banner {
+      border-radius: var(--radius-lg);
+      padding: 18px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      transition: all var(--transition-normal);
+      border: 1px solid;
+      background: var(--bg-surface);
+    }
+    .warning-banner.danger { 
+      border-color: rgba(255, 77, 106, 0.3); 
+      background: rgba(255, 77, 106, 0.06);
+    }
+    .warning-banner.warning { 
+      border-color: rgba(255, 170, 0, 0.3); 
+      background: rgba(255, 170, 0, 0.06);
+    }
+    .warning-banner.success { 
+      border-color: rgba(0, 230, 118, 0.3); 
+      background: rgba(0, 230, 118, 0.06);
+    }
+    
+    .warning-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+    }
+    .warning-banner.danger .warning-icon { color: var(--accent-danger); }
+    .warning-banner.warning .warning-icon { color: #ffb347; }
+    .warning-banner.success .warning-icon { color: var(--accent-success); }
+    
+    .warning-content h4 { 
+      font-size: 15px; 
+      font-weight: 700; 
+      margin-bottom: 4px; 
+      color: var(--text-primary);
+      font-family: var(--font-heading);
+    }
+    .warning-banner.danger .warning-content h4 { color: var(--accent-danger); }
+    .warning-banner.warning .warning-content h4 { color: #ffb347; }
+    .warning-banner.success .warning-content h4 { color: var(--accent-success); }
+    
+    .warning-content p { 
+      font-size: 13px; 
+      color: var(--text-secondary); 
+      margin: 0; 
+      line-height: 1.5; 
+    }
+
+    /* ===== ORDER SECTION ===== */
+    .order-section {
+      background: var(--bg-surface);
+      border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+      padding: 40px 24px 48px;
+      margin-top: 16px;
+      border: 1px solid var(--border-subtle);
+      border-bottom: none;
+      box-shadow: 0 -16px 60px rgba(0,0,0,0.4);
+      position: relative;
+    }
+    .order-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+      opacity: 0.4;
+    }
+    
+    .order-section h2 {
+      font-family: var(--font-heading);
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text-primary);
+      letter-spacing: -0.5px;
+    }
+    
+    .input-group { margin-bottom: 20px; }
+    .input-group label {
+      display: block;
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-family: var(--font-heading);
+    }
+    
+    .custom-input, .custom-select {
+      background: var(--bg-surface-elevated);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      color: var(--text-primary);
+      font-size: 16px;
+      font-family: var(--font-body);
+      outline: none;
+      width: 100%;
+      transition: all var(--transition-normal);
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .custom-input::placeholder { color: var(--text-muted); opacity: 0.7; }
+    
+    .custom-select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23a0a0b0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 44px;
+    }
+    .custom-select option { 
+      background: var(--bg-surface-elevated); 
+      color: var(--text-primary); 
+    }
+    
+    .custom-input:focus, .custom-select:focus { 
+      border-color: var(--accent-gold); 
+      background: var(--bg-base);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+    }
+    
+    textarea.custom-input { 
+      resize: vertical; 
+      min-height: 100px; 
+      font-family: var(--font-body);
+    }
+    
+    .row { 
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      gap: 16px; 
+    }
+
+    /* ===== CART ITEM ===== */
+    .cart-item {
+      background: var(--bg-surface-elevated);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      margin-bottom: 12px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      position: relative;
+      transition: all var(--transition-normal);
+    }
+    .cart-item.missing-variant { 
+      border-color: var(--accent-danger); 
+      background: rgba(255, 77, 106, 0.08);
+      animation: pulseWarning 2s infinite;
+    }
+    @keyframes pulseWarning { 
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255, 77, 106, 0.1); } 
+      50% { box-shadow: 0 0 0 10px rgba(255, 77, 106, 0); } 
+    }
+    
+    .cart-item:hover {
+      border-color: var(--accent-gold);
+      transform: translateX(4px);
+    }
+    
+    .cart-item img { 
+      width: 64px; 
+      height: 64px; 
+      border-radius: var(--radius-md); 
+      object-fit: cover; 
+      border: 1px solid var(--border-subtle);
+    }
+    
+    .cart-item-details { flex: 1; min-width: 0; }
+    .cart-item-details > div:first-child {
+      font-weight: 600; 
+      margin-bottom: 6px; 
+      font-size: 15px; 
+      color: var(--text-primary);
+      font-family: var(--font-heading);
+    }
+    .cart-item-details > div:nth-child(2) {
+      color: var(--accent-gold); 
+      font-weight: 700; 
+      margin-bottom: 10px;
+      font-size: 17px;
+      font-family: var(--font-heading);
+    }
+    
+    .variant-select {
+      margin-top: 10px;
+      padding: 12px 16px;
+      background: var(--bg-base);
+      border: 1.5px solid var(--border-subtle);
+      color: var(--text-primary);
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      width: 100%;
+      outline: none;
+      font-weight: 500;
+      transition: all var(--transition-normal);
+      -webkit-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23a0a0b0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 40px;
+    }
+    .variant-select.error { 
+      border-color: var(--accent-danger); 
+      background: rgba(255, 77, 106, 0.08); 
+    }
+    .variant-select:focus {
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+    }
+    
+    .variant-warning { 
+      display: none; 
+      align-items: center; 
+      gap: 6px; 
+      margin-top: 8px; 
+      font-size: 12px; 
+      color: var(--accent-danger); 
+      font-weight: 500; 
+    }
+    .variant-warning.show { display: flex; }
+    .variant-warning svg { flex-shrink: 0; }
+    
+    .remove-btn {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      background: var(--bg-base);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 6px 12px;
+      transition: all var(--transition-fast);
+      font-family: var(--font-heading);
+    }
+    .remove-btn:hover { 
+      background: var(--accent-danger); 
+      color: white; 
+      border-color: var(--accent-danger);
+      transform: scale(1.05);
+    }
+
+    .btn-submit {
+      background: var(--bg-surface-elevated);
+      color: var(--text-muted);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: var(--radius-full);
+      padding: 18px;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: var(--font-heading);
+      cursor: not-allowed;
+      width: 100%;
+      margin-top: 24px;
+      transition: all var(--transition-normal);
+      letter-spacing: 0.5px;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-submit::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-electric));
+      opacity: 0;
+      transition: opacity var(--transition-normal);
+      z-index: -1;
+    }
+    
+    .btn-submit.active {
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-electric));
+      color: var(--bg-base);
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 32px rgba(212, 175, 55, 0.4);
+      font-weight: 700;
+    }
+    .btn-submit.active:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(212, 175, 55, 0.6);
+    }
+    .btn-submit.active:hover::before { opacity: 0.1; }
+    
+    .hidden { display: none !important; }
+    
+    .info-box {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.06), rgba(0, 212, 255, 0.04));
+      border: 1px solid var(--border-subtle);
+      border-left: 3px solid var(--accent-gold);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin: 24px 0;
+      line-height: 1.6;
+    }
+    .info-box strong { color: var(--accent-gold); }
+    .info-box strong[style*="color:#E74C3C"] { color: var(--accent-danger); }
+
+    /* ===== REVIEWS SECTION ===== */
+    .reviews-section { 
+      padding: 56px 20px; 
+      border-top: 1px solid var(--border-subtle); 
+      background: var(--bg-base);
+      position: relative;
+    }
+    .reviews-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+      opacity: 0.3;
+    }
+    
+    .review-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      margin: 0 auto;
+      max-width: 520px;
+      text-align: left;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+    .review-card::before {
+      content: '"';
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      font-size: 64px;
+      color: var(--accent-gold);
+      opacity: 0.15;
+      font-family: Georgia, serif;
+      line-height: 1;
+      pointer-events: none;
+      font-weight: 300;
+    }
+    
+    .review-header { 
+      display: flex; 
+      align-items: center; 
+      gap: 14px; 
+      margin-bottom: 16px; 
+    }
+    .review-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border-subtle);
+      flex-shrink: 0;
+      transition: border-color var(--transition-fast);
+    }
+    .review-card:hover .review-avatar {
+      border-color: var(--accent-gold);
+    }
+    
+    .review-username { 
+      font-weight: 600; 
+      font-size: 16px; 
+      color: var(--text-primary); 
+      display: flex; 
+      align-items: center; 
+      gap: 8px; 
+      flex-wrap: wrap;
+      font-family: var(--font-heading);
+    }
+    .verified-badge { 
+      background: rgba(0, 230, 118, 0.15); 
+      color: var(--accent-success); 
+      font-size: 10px; 
+      padding: 4px 10px; 
+      border-radius: var(--radius-full); 
+      font-weight: 600; 
+      letter-spacing: 0.5px; 
+      white-space: nowrap;
+      border: 1px solid rgba(0, 230, 118, 0.3);
+    }
+    .review-date { 
+      font-size: 12px; 
+      color: var(--text-muted); 
+      margin-top: 3px; 
+    }
+    .review-stars { 
+      color: var(--accent-gold); 
+      font-size: 16px; 
+      letter-spacing: 3px; 
+      margin-bottom: 14px;
+      text-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+    }
+    .review-text { 
+      color: var(--text-secondary); 
+      font-size: 15px; 
+      line-height: 1.65; 
+      font-weight: 400;
+    }
+
+    /* ===== FAQ SECTION ===== */
+    .faq-section { 
+      padding: 56px 20px; 
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-base);
+    }
+    
+    details {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      margin-bottom: 12px;
+      padding: 18px 22px;
+      transition: all var(--transition-normal);
+      position: relative;
+      overflow: hidden;
+    }
+    details::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--accent-gold), var(--accent-electric));
+      opacity: 0;
+      transition: opacity var(--transition-normal);
+    }
+    details[open] {
+      border-color: var(--accent-gold);
+      background: var(--bg-surface-elevated);
+    }
+    details[open]::before { opacity: 1; }
+    
+    summary {
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      font-family: var(--font-heading);
+      padding-right: 24px;
+      position: relative;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { 
+      content: '+'; 
+      color: var(--accent-gold); 
+      font-size: 22px; 
+      font-weight: 300; 
+      transition: all var(--transition-normal);
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    details[open] summary::after { 
+      content: '−'; 
+      transform: translateY(-50%) rotate(90deg);
+    }
+    
+    .faq-answer { 
+      margin-top: 14px; 
+      color: var(--text-secondary); 
+      font-size: 15px; 
+      line-height: 1.7;
+      padding-left: 4px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer { 
+      padding: 32px 24px; 
+      text-align: center; 
+      color: var(--text-muted); 
+      font-size: 13px; 
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+    }
+
+    /* ===== TOAST NOTIFICATION ===== */
+    .toast {
+      position: fixed;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg-surface-elevated);
+      color: var(--text-primary);
+      padding: 14px 28px;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: 14px;
+      z-index: 999;
+      box-shadow: var(--shadow-lg), 0 0 24px rgba(0,0,0,0.3);
+      animation: slideDown 0.4s ease, slideUp 0.4s ease 2.8s forwards;
+      text-align: center;
+      max-width: 92%;
+      pointer-events: none;
+      border: 1px solid var(--border-subtle);
+      font-family: var(--font-heading);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .toast::before {
+      content: '';
+      width: 4px;
+      height: 16px;
+      border-radius: 2px;
+      background: var(--accent-gold);
+    }
+    .toast[style*="color:#E74C3C"]::before { background: var(--accent-danger); }
+    .toast[style*="color:#F39C12"]::before { background: #ffb347; }
+    .toast[style*="color:#27AE60"]::before { background: var(--accent-success); }
+    
+    @keyframes slideDown { 
+      from { opacity: 0; transform: translateX(-50%) translateY(-24px); } 
+      to { opacity: 1; transform: translateX(-50%) translateY(0); } 
+    }
+    @keyframes slideUp { 
+      from { opacity: 1; transform: translateX(-50%) translateY(0); } 
+      to { opacity: 0; transform: translateX(-50%) translateY(-24px); } 
+    }
+
+    /* ===== SUCCESS MODAL ===== */
+    .success-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(10, 10, 15, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      opacity: 0;
+      animation: fadeInOverlay 0.4s forwards;
+      padding: 24px;
+    }
+    .success-modal {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 44px 36px;
+      text-align: center;
+      max-width: 440px;
+      width: 100%;
+      box-shadow: var(--shadow-lg), 0 0 40px rgba(212, 175, 55, 0.15);
+      transform: translateY(24px);
+      animation: slideUpModal 0.5s forwards 0.1s;
+      position: relative;
+      overflow: hidden;
+    }
+    .success-modal::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-gold), var(--accent-electric));
+    }
+    
+    .success-icon {
+      width: 88px;
+      height: 88px;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.12), rgba(0, 212, 255, 0.08));
+      color: var(--accent-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      margin: 0 auto 24px;
+      border: 2px solid rgba(212, 175, 55, 0.3);
+      position: relative;
+      box-shadow: 0 0 32px rgba(212, 175, 55, 0.2);
+    }
+    .success-icon::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      border-top-color: var(--accent-gold);
+      border-bottom-color: var(--accent-electric);
+      animation: rotate 2s linear infinite;
+    }
+    @keyframes rotate {
+      to { transform: rotate(360deg); }
+    }
+    
+    .success-title { 
+      font-family: var(--font-heading); 
+      font-size: 28px; 
+      font-weight: 800; 
+      color: var(--text-primary); 
+      margin-bottom: 18px;
+      letter-spacing: -0.5px;
+    }
+    .success-text { 
+      font-size: 16px; 
+      color: var(--text-secondary); 
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+    .success-text strong { color: var(--accent-gold); }
+    .success-timer { 
+      font-size: 13px; 
+      color: var(--text-muted); 
+      margin-top: 28px;
+      font-family: var(--font-heading);
+    }
+    #countdown {
+      color: var(--accent-gold);
+      font-weight: 700;
+      font-size: 15px;
+    }
+    
+    @keyframes fadeInOverlay { to { opacity: 1; } }
+    @keyframes slideUpModal { to { transform: translateY(0); } }
+
+    /* ===== LIGHTBOX ===== */
+    .lightbox-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(10, 10, 15, 0.96);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      opacity: 0;
+      animation: fadeIn 0.3s forwards;
+      padding: 24px;
+      cursor: pointer;
+    }
+    .lightbox-content {
+      position: relative;
+      max-width: 96vw;
+      max-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: default;
+      background: var(--bg-surface);
+      border-radius: var(--radius-xl);
+      padding: 24px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-lg);
+    }
+    .lightbox-image {
+      max-width: 100%;
+      max-height: 72vh;
+      object-fit: contain;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      animation: zoomIn 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+      border: 1px solid var(--border-subtle);
+    }
+    .lightbox-info { 
+      margin-top: 24px; 
+      text-align: center;
+      padding: 0 12px;
+    }
+    .lightbox-title { 
+      font-family: var(--font-heading); 
+      font-size: 24px; 
+      font-weight: 700; 
+      color: var(--text-primary); 
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+    .lightbox-price { 
+      font-size: 22px; 
+      font-weight: 700; 
+      color: var(--accent-gold);
+      font-family: var(--font-heading);
+      text-shadow: 0 0 12px var(--text-glow);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: -56px;
+      right: 0;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      font-size: 24px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-normal);
+      z-index: 10;
+      box-shadow: var(--shadow-md);
+      font-weight: 300;
+    }
+    .lightbox-close:hover { 
+      background: var(--accent-danger); 
+      color: white; 
+      border-color: var(--accent-danger);
+      transform: rotate(90deg) scale(1.1);
+    }
+    
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes zoomIn { from { opacity: 0; transform: scale(0.92); } to { opacity: 1; transform: scale(1); } }
+
+    /* ===== LOADING STATE ===== */
+    #loading {
+      text-align: center; 
+      color: var(--accent-gold); 
+      padding: 64px 24px; 
+      font-size: 15px; 
+      letter-spacing: 3px; 
+      font-weight: 600;
+      font-family: var(--font-heading);
+      text-transform: uppercase;
+      position: relative;
+    }
+    #loading::after {
+      content: '';
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 48px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-gold), var(--accent-electric));
+      border-radius: 2px;
+      animation: loadingBar 1.5s ease-in-out infinite;
+    }
+    @keyframes loadingBar {
+      0%, 100% { width: 24px; opacity: 0.5; }
+      50% { width: 48px; opacity: 1; }
+    }
+
+    /* ===== REVIEW DOTS ===== */
+    #review-dots {
+      display: flex; 
+      justify-content: center; 
+      gap: 8px; 
+      margin-top: 24px;
+    }
+    #review-dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--border-subtle);
+      transition: all var(--transition-normal);
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    #review-dots span[style*="background:var(--brand-pink)"],
+    #review-dots span[style*="var(--accent-gold)"] {
+      background: var(--accent-gold);
+      border-color: var(--accent-electric);
+      transform: scale(1.15);
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 768px) {
+      .hero { padding: 64px 0 40px; }
+      .campaign-banner { padding: 40px 36px; margin: 32px auto 40px; }
+      .campaign-price { font-size: 68px; }
+      .product-grid { gap: 24px; }
+      .card-img-wrapper { height: 240px; }
+      .order-section { padding: 52px 40px 60px; }
+      .reviews-section, .faq-section { padding: 72px 0; }
+    }
+
+    /* ===== ACCESSIBILITY ===== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* Focus styles */
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 2px solid var(--accent-electric);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header" id="mainHeader">
+    <div class="logo-container">
+      <div class="logo-icon">S</div>
+      <span class="logo-text font-heading text-gradient-gold" id="headerLogo" onclick="fbq('track', 'CustomizeProduct', {content_type: 'brand_click'}); typeof ttq !== 'undefined' && ttq.track('ClickButton', {content_name: 'logo_click'});">SOLE & CO</span>
+    </div>
+    <div class="header-badge" id="headerBadge">✦ Premium</div>
+    <a href="https://wa.me/905555555555" class="btn-whatsapp" id="whatsappBtn" target="_blank" onclick="fbq('track', 'Contact', {contact_method: 'whatsapp'}); typeof ttq !== 'undefined' && ttq.track('Contact', {content_name: 'whatsapp_button'});">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+      <span id="whatsappText">Destek</span>
+    </a>
+  </header>
+
+  <section class="hero">
+    <span class="hero-tag" id="heroTag">✦ Yeni Sezon</span>
+    <h1 class="font-heading text-gradient-gold text-glow" id="heroTitle">İki adet 1200 TL<br><span class="text-gradient-electric">Kapıda Ödeme</span></h1>
+    <p id="campaign-desc">İki ürün seç.</p>
+  </section>
+
+  <main class="container products-section">
+    <div id="loading">KOLEKSİYON YÜKLENİYOR</div>
+    
+    <div class="campaign-banner">
+      <div class="campaign-badge" id="campaignBadge">⚡ ÖZEL FIRSAT</div>
+      <div style="font-size:14px; color:var(--text-secondary); font-weight:500; letter-spacing:1px; margin-bottom:8px;" id="campaignTitle">2 Çift Kampanya Fiyatı</div>
+      <div class="campaign-price text-gradient-gold" id="campaignPrice">1.200 ₺</div>
+      <div class="campaign-subtitle" id="campaignSubtitle">Kapıda Ödeme · Ücretsiz Kargo</div>
+      <div class="campaign-stars">★ ★ ★ ★ ★</div>
+    </div>
+
+    <div class="satisfaction-slider">
+      <div class="satisfaction-header">
+        <div class="satisfaction-title font-heading">
+          <span style="color:var(--accent-gold); font-size:18px;">✦</span>
+          Müşteri Memnuniyeti
+        </div>
+        <span class="satisfaction-badge">YENİ</span>
+      </div>
+      <div class="satisfaction-container" id="satisfactionContainer"></div>
+    </div>
+
+    <div id="product-list" class="product-grid"></div>
+  </main>
+
+  <div id="sticky-bar" class="sticky-bar">
+    <div class="sticky-info">
+      <div id="cart-count">0 ÜRÜN</div>
+      <div id="total-price-display">0.00 ₺</div>
+    </div>
+    <button onclick="window.processStickyClick()" class="sticky-btn" id="sticky-checkout-btn">Eksik Ürün Var</button>
+  </div>
+
+  <section id="order-section" class="order-section hidden">
+    <div class="container" style="padding:0; max-width:680px;">
+      <h2 class="font-heading text-gradient-gold" style="font-size:28px; font-weight:700; margin-bottom:12px; letter-spacing:-0.5px;">Sipariş Bilgileri</h2>
+      
+      <div id="order-warning-banner" class="warning-banner danger">
+        <div class="warning-icon">⚠</div>
+        <div class="warning-content">
+          <h4 id="warning-title" class="font-heading">Ürün Seçimi Gerekli</h4>
+          <p id="warning-message">Sipariş verebilmek için lütfen yukarıdan en az 2 ürün seçin.</p>
+        </div>
+      </div>
+
+      <div id="cart-items-summary" style="margin-bottom: 32px;"></div>
+
+      <form id="orderForm">
+        <div class="input-group">
+          <label>Ad Soyad *</label>
+          <input class="custom-input" type="text" id="adSoyad" placeholder="Adınız ve soyadınız" required>
+        </div>
+        <div class="input-group">
+          <label>Telefon Numarası *</label>
+          <input class="custom-input" type="tel" id="telefon" placeholder="05XX XXX XX XX" oninput="let v = this.value.replace(/[^0-9]/g, ''); if(v.startsWith('905')) v = '0' + v.substring(2); else if(v.startsWith('5')) v = '0' + v; else if(v.length > 0 && !v.startsWith('0')) v = '0' + v; this.value = v.substring(0, 11);" required>
+        </div>
+        <div class="row">
+          <div class="input-group">
+            <label>İl *</label>
+            <select class="custom-select" id="il" required>
+              <option value="">İl Seçiniz</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>İlçe *</label>
+            <select class="custom-select" id="ilce" required disabled>
+              <option value="">Önce il seçiniz</option>
+            </select>
+          </div>
+        </div>
+        <div class="input-group">
+          <label>Açık Adres *</label>
+          <textarea class="custom-input" id="adres" placeholder="Mahalle, sokak, bina no, daire no..." required rows="3"></textarea>
+        </div>
+        <div class="input-group">
+          <label>Not (opsiyonel)</label>
+          <input class="custom-input" type="text" id="mesaj" placeholder="Örn: Kapı zili arızalı">
+        </div>
+        <div class="info-box">
+          <strong style="color:var(--accent-gold);">⚠ Sipariş Ver</strong> butonuna bastığınızda siparişiniz oluşturulur.<br>
+          <strong style="color:var(--accent-electric); margin-top:8px; display:inline-block;">📲 Onay</strong> için müşteri temsilcimiz WhatsApp üzerinden iletişime geçecektir.<br>
+          <strong style="color:var(--accent-danger); margin-top:8px; display:inline-block;">🚚 Önemli</strong>: ARAS KARGO ile çalışıyoruz. Köylere, askeriye ve inşaatlara ARAS KARGO <strong>gönderim yapmamaktadır.</strong> Adres eksikliği durumunda siparişiniz kargoya <strong>verilmeyecektir</strong>.
+        </div>
+        <button type="submit" id="submitBtn" class="btn-submit" disabled>2 ürün seçmeniz gerekiyor</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="reviews-section">
+    <div class="container" style="padding:0; max-width:680px;">
+      <h2 class="font-heading text-gradient-gold" id="reviewsTitle" style="font-size:26px; margin-bottom:28px; text-align:center; letter-spacing:-0.5px;">Müşterilerimiz Ne Diyor?</h2>
+      <div id="review-container" class="review-card"></div>
+      <div style="display:flex; justify-content:center; gap:8px; margin-top:24px;" id="review-dots"></div>
+    </div>
+  </section>
+
+  <section class="faq-section container" style="max-width:680px;">
+    <h2 class="font-heading text-gradient-gold" id="faqTitle" style="font-size:26px; color:var(--text-primary); margin-bottom:28px; text-align:center; letter-spacing:-0.5px;">Sıkça Sorulan Sorular</h2>
+    <details><summary class="font-heading">🚚 Kargom kaç günde ulaşır?</summary><div class="faq-answer">Siparişiniz onaylandıktan sonra 24 saat içerisinde kargoya verilir. Teslimat süresi bulunduğunuz ile göre 1-3 iş günü arası değişmektedir.</div></details>
+    <details><summary class="font-heading">💳 Kapıda ödeme yapabilir miyim?</summary><div class="faq-answer">Evet, tüm siparişlerinizde şeffaf kargo güvencesiyle kapıda nakit veya kredi kartı ile ödeme yapabilirsiniz.</div></details>
+    <details><summary class="font-heading">🔄 İade veya değişim var mı?</summary><div class="faq-answer">Ürünlerimizde koşulsuz şartsız 14 gün içerisinde değişim garantisi mevcuttur. Kusurlu ürünlerde birebir iade hakkınız bulunmaktadır.</div></details>
+    <details><summary class="font-heading">❓ Ürünler orijinal mi?</summary><div class="faq-answer">Koleksiyonumuzdaki tüm ürünler, global standartlarda üretilmiş 1. sınıf premium ithal ürünlerdir.</div></details>
+  </section>
+
+  <footer id="footerText">© 2024 SOLE & CO. Tüm hakları saklıdır.</footer>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+    import { getFirestore, collection, getDocs, doc, getDoc, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAKMJnXDzKytUnJpgJnEJ9IqLGHYSbv_Qc",
+  authDomain: "tekyaprak-716da.firebaseapp.com",
+  projectId: "tekyaprak-716da",
+  storageBucket: "tekyaprak-716da.firebasestorage.app",
+  messagingSenderId: "398706872594",
+  appId: "1:398706872594:web:6aadfce2953cf29ed7e3cb"
+};
+
+    const app = initializeApp(firebaseConfig, 'mainApp');
+    const db = getFirestore(app);
+
+    let cart = [];
+    let allProducts = [];
+    let campaignSettings = { active: false, secondProductPrice: 0, message: "", minOrderCount: 1 };
+    window._hasAutoScrolledToForm = false; 
+
+    const FacebookPixel = {
+      track(eventName, params = {}, eventId = null) { 
+        if (typeof fbq === 'function') {
+          if(eventId) fbq('track', eventName, params, { eventID: eventId });
+          else fbq('track', eventName, params);
+        }
+      },
+      trackViewContent(product) { this.track('ViewContent', { content_name: product.isim, content_ids: [product.id], content_type: 'product', value: product.fiyat, currency: 'TRY' }); },
+      trackAddToCart(product, quantity = 1) { this.track('AddToCart', { content_name: product.isim, content_ids: [product.id], content_type: 'product', value: product.fiyat, currency: 'TRY', contents: [{ id: product.id, quantity: quantity, item_price: product.fiyat }] }); },
+      trackInitiateCheckout(cartItems, totalValue) {
+        const contents = cartItems.map((item, index) => {
+          const price = (index > 0 && campaignSettings.active) ? campaignSettings.secondProductPrice : item.fiyat;
+          return { id: item.id, quantity: 1, item_price: price, name: item.isim };
+        });
+        this.track('InitiateCheckout', { content_ids: cartItems.map(item => item.id), contents: contents, content_type: 'product', value: totalValue, currency: 'TRY', num_items: cartItems.length });
+      },
+      trackPurchase(orderId, cartItems, totalValue, customerInfo = {}) {
+        const contents = cartItems.map((item, index) => {
+          const price = (index > 0 && campaignSettings.active) ? campaignSettings.secondProductPrice : item.fiyat;
+          return { id: item.id, quantity: 1, item_price: price, name: item.isim };
+        });
+        const purchaseParams = { content_type: 'product', contents: contents, content_ids: cartItems.map(item => item.id), value: totalValue, currency: 'TRY', num_items: cartItems.length };
+        
+        if (typeof fbq === 'function' && Object.keys(customerInfo).length > 0) {
+           fbq('set', 'userData', {
+             ph: customerInfo.phone,
+             fn: customerInfo.firstName,
+             ln: customerInfo.lastName,
+             ct: customerInfo.city
+           }, FB_PIXEL_ID);
+        }
+
+        this.track('Purchase', purchaseParams, orderId);
+      }
+    };
+
+    const TikTokPixel = {
+      track(eventName, params = {}, eventId = null) {
+        if (typeof ttq !== 'undefined') {
+          const options = eventId ? { event_id: eventId } : {};
+          ttq.track(eventName, params, options);
+        }
+      },
+      identify(customerInfo) {
+        if (typeof ttq !== 'undefined' && Object.keys(customerInfo).length > 0) {
+          ttq.identify({
+            phone_number: customerInfo.phone, 
+          });
+        }
+      },
+      trackViewContent(product) {
+        this.track('ViewContent', {
+          contents: [{ content_id: product.id, content_name: product.isim, price: product.fiyat, quantity: 1 }],
+          content_type: 'product',
+          value: product.fiyat,
+          currency: 'TRY'
+        });
+      },
+      trackAddToCart(product, quantity = 1) {
+        this.track('AddToCart', {
+          contents: [{ content_id: product.id, content_name: product.isim, price: product.fiyat, quantity: quantity }],
+          content_type: 'product',
+          value: product.fiyat,
+          currency: 'TRY'
+        });
+      },
+      trackInitiateCheckout(cartItems, totalValue) {
+        const contents = cartItems.map((item, index) => {
+          const price = (index > 0 && campaignSettings.active) ? campaignSettings.secondProductPrice : item.fiyat;
+          return { content_id: item.id, content_name: item.isim, price: price, quantity: 1 };
+        });
+        this.track('InitiateCheckout', {
+          contents: contents,
+          content_type: 'product',
+          value: totalValue,
+          currency: 'TRY'
+        });
+      },
+      trackCompletePayment(orderId, cartItems, totalValue, customerInfo = {}) {
+        this.identify(customerInfo);
+        
+        const contents = cartItems.map((item, index) => {
+          const price = (index > 0 && campaignSettings.active) ? campaignSettings.secondProductPrice : item.fiyat;
+          return { content_id: item.id, content_name: item.isim, price: price, quantity: 1 };
+        });
+        const params = {
+          contents: contents,
+          content_type: 'product',
+          value: totalValue,
+          currency: 'TRY'
+        };
+        
+        this.track('CompletePayment', params, orderId);
+      }
+    };
+
+    const satisfactionData = [
+      { image: "https://i.hizliresim.com/ek6mt5f.jpg", name: "Müşteri memnuniyeti" },
+      { image: "https://i.hizliresim.com/4th9xnp.jpg", name: "MÜŞTERİ MEMNUNİYETİ" },
+      { image: "https://i.hizliresim.com/6wo49xq.jpg", name: "MÜŞTERİ MEMNUNİYETİ" },
+      { image: "https://i.hizliresim.com/l4goj53.jpg", name: "MÜŞTERİ MEMNUNİYETİ" },
+      { image: "https://i.hizliresim.com/rumsv01.jpg", name: "MÜŞTERİ MEMNUNİYETİ" },
+      { image: "https://i.hizliresim.com/k4c7b5r.jpg", name: "MÜŞTERİ MEMNUNİYETİ" },
+      { image: "https://i.hizliresim.com/stjiizw.jpg", name: "MÜŞTERİ MEMNUNİYETİ" },
+      { image: "https://i.hizliresim.com/icuk6ot.jpg", name: "MÜŞTERİ MEMNUNİYETİ" }
+    ];
+
+    const reviews = [
+      { name: "Mustafa Atay", avatar: "https://i.pravatar.cc/100?img=11", date: "1 gün önce", stars: 5, text: "Gerçekten harika bir alışveriş deneyimiydi. Ayakkabıların kalitesi beklediğimin çok üstünde çıktı. 2 günde teslim edildi, paketleme bile özenliydi. Kesinlikle tekrar alışveriş yapacağım." },
+      { name: "Zeynep Kaya", avatar: "https://i.pravatar.cc/100?img=5", date: "1 hafta önce", stars: 5, text: "Kampanyadan 2 ürün aldım, ikisi de birbirinden güzel. Müşteri hizmetleri çok ilgiliydi, WhatsApp'tan anında dönüş yaptılar." },
+      { name: "Mehmet Demir", avatar: "https://i.pravatar.cc/100?img=12", date: "3 gün önce", stars: 5, text: "Deri dokusu, dikiş kalitesi gerçekten premium seviyede. Fiyat performans olarak piyasadaki en iyi seçenek." },
+      { name: "Ayşe Öztürk", avatar: "https://i.pravatar.cc/100?img=9", date: "5 gün önce", stars: 5, text: "Kapıda ödeme seçeneği çok güven vericiydi. Ürünü teslim almadan önce kontrol ettim, her şey eksiksizdi." },
+      { name: "Emre Çelik", avatar: "https://i.pravatar.cc/100?img=15", date: "1 gün önce", stars: 5, text: "Siparişim beklediğimden çok daha hızlı geldi. Ürün fotoğraflardaki gibi, hatta daha güzel. Teşekkürler!" },
+      { name: "Elif Şahin", avatar: "https://i.pravatar.cc/100?img=23", date: "4 gün önce", stars: 5, text: "İade sürecim çok sorunsuz halledildi. Müşteri temsilcisi adım adım yardımcı oldu. Güvenle alışveriş yapabileceğiniz bir site." },
+      { name: "Burak Yıldız", avatar: "https://i.pravatar.cc/100?img=33", date: "6 gün önce", stars: 4, text: "Ürün kaliteli ama kargo biraz geç geldi. Yine de memnunum, fiyatına göre çok iyi." },
+      { name: "Merve Aydın", avatar: "https://i.pravatar.cc/100?img=44", date: "2 hafta önce", stars: 5, text: "Hediyelik aldığım ürün tam istediğim gibi çıktı. Paketleme o kadar şık ki, hediye paketi yapmama bile gerek kalmadı!" },
+      { name: "Can Arslan", avatar: "https://i.pravatar.cc/100?img=52", date: "3 gün önce", stars: 5, text: "Bedem tam oturdu, malzeme kalitesi mükemmel. Bir sonraki siparişimi de buradan vereceğim kesin." },
+      { name: "Seda Kurt", avatar: "https://i.pravatar.cc/100?img=61", date: "1 hafta önce", stars: 5, text: "Canlı destekte sorularıma anında yanıt aldım. Ürün de açıklamada belirtildiği gibi geldi. Çok memnun kaldım." }
+    ];
+
+    let currentReviewIndex = 0;
+    const reviewContainer = document.getElementById('review-container');
+    const reviewDots = document.getElementById('review-dots');
+
+    const ilIlceVerileri = {
+      "Adana": ["Aladağ", "Ceyhan", "Çukurova", "Feke", "İmamoğlu", "Karaisalı", "Karataş", "Kozan", "Pozantı", "Saimbeyli", "Sarıçam", "Seyhan", "Tufanbeyli", "Yumurtalık", "Yüreğir"],
+      "Adıyaman": ["Besni", "Çelikhan", "Gerger", "Gölbaşı", "Kahta", "Merkez", "Samsat", "Sincik", "Tut"],
+      "Afyonkarahisar": ["Başmakçı", "Bayat", "Bolvadin", "Çay", "Çobanlar", "Dazkırı", "Dinar", "Emirdağ", "Evciler", "Hocalar", "İhsaniye", "İscehisar", "Kızılören", "Merkez", "Sandıklı", "Sinanpaşa", "Sultandağı", "Şuhut"],
+      "Ağrı": ["Diyadin", "Doğubayazıt", "Eleşkirt", "Hamur", "Merkez", "Patnos", "Taşlıçay", "Tutak"],
+      "Amasya": ["Göynücek", "Gümüşhacıköy", "Hamamözü", "Merkez", "Merzifon", "Suluova", "Taşova"],
+      "Ankara": ["Akyurt", "Altındağ", "Ayaş", "Bala", "Beypazarı", "Çamlıdere", "Çankaya", "Çubuk", "Elmadağ", "Etimesgut", "Evren", "Gölbaşı", "Güdül", "Haymana", "Kahramankazan", "Kalecik", "Keçiören", "Kızılcahamam", "Mamak", "Nallıhan", "Polatlı", "Pursaklar", "Sincan", "Şereflikoçhisar", "Yenimahalle"],
+      "Antalya": ["Akseki", "Aksu", "Alanya", "Demre", "Döşemealtı", "Elmalı", "Finike", "Gazipaşa", "Gündoğmuş", "İbradı", "Kaş", "Kemer", "Kepez", "Konyaaltı", "Korkuteli", "Kumluca", "Manavgat", "Muratpaşa", "Serik"],
+      "Artvin": ["Ardanuç", "Arhavi", "Borçka", "Hopa", "Merkez", "Murgul", "Şavşat", "Yusufeli"],
+      "Aydın": ["Bozdoğan", "Buharkent", "Çine", "Didim", "Efeler", "Germencik", "İncirliova", "Karacasu", "Karpuzlu", "Koçarlı", "Köşk", "Kuşadası", "Kuyucak", "Nazilli", "Söke", "Sultanhisar", "Yenipazar"],
+      "Balıkesir": ["Altıeylül", "Ayvalık", "Balya", "Bandırma", "Bigadiç", "Burhaniye", "Dursunbey", "Edremit", "Erdek", "Gömeç", "Gönen", "Havran", "İvrindi", "Karesi", "Kepsut", "Manyas", "Marmara", "Savaştepe", "Sındırgı", "Susurluk"],
+      "Bilecik": ["Bozüyük", "Gölpazarı", "İnhisar", "Merkez", "Osmaneli", "Pazaryeri", "Söğüt", "Yenipazar"],
+      "Bingöl": ["Adaklı", "Genç", "Karlıova", "Kiğı", "Merkez", "Solhan", "Yayladere", "Yedisu"],
+      "Bitlis": ["Adilcevaz", "Ahlat", "Güroymak", "Hizan", "Merkez", "Mutki", "Tatvan"],
+      "Bolu": ["Dörtdivan", "Gerede", "Göynük", "Kıbrıscık", "Mengen", "Merkez", "Mudurnu", "Seben", "Yeniçağa"],
+      "Burdur": ["Ağlasun", "Altınyayla", "Bucak", "Çavdır", "Çeltikçi", "Gölhisar", "Karamanlı", "Kemer", "Merkez", "Tefenni", "Yeşilova"],
+      "Bursa": ["Büyükorhan", "Gemlik", "Gürsu", "Harmancık", "İnegöl", "İznik", "Karacabey", "Keles", "Kestel", "Mudanya", "Mustafakemalpaşa", "Nilüfer", "Orhaneli", "Orhangazi", "Osmangazi", "Yenişehir", "Yıldırım"],
+      "Çanakkale": ["Ayvacık", "Bayramiç", "Biga", "Bozcaada", "Çan", "Eceabat", "Ezine", "Gelibolu", "Gökçeada", "Lapseki", "Merkez", "Yenice"],
+      "Çankırı": ["Atkaracalar", "Bayramören", "Çerkeş", "Eldivan", "Ilgaz", "Kızılırmak", "Korgun", "Kurşunlu", "Merkez", "Orta", "Şabanözü", "Yapraklı"],
+      "Çorum": ["Alaca", "Bayat", "Boğazkale", "Dodurga", "İskilip", "Kargı", "Laçin", "Mecitözü", "Merkez", "Oğuzlar", "Ortaköy", "Osmancık", "Sungurlu", "Uğurludağ"],
+      "Denizli": ["Acıpayam", "Babadağ", "Baklan", "Bekilli", "Beyağaç", "Bozkurt", "Buldan", "Çal", "Çameli", "Çardak", "Çivril", "Güney", "Honaz", "Kale", "Merkezefendi", "Pamukkale", "Sarayköy", "Serinhisar", "Tavas"],
+      "Diyarbakır": ["Bağlar", "Bismil", "Çermik", "Çınar", "Çüngüş", "Dicle", "Eğil", "Ergani", "Hani", "Hazro", "Kayapınar", "Kocaköy", "Kulp", "Lice", "Silvan", "Sur", "Yenişehir"],
+      "Edirne": ["Enez", "Havsa", "İpsala", "Keşan", "Lalapaşa", "Meriç", "Merkez", "Süloğlu", "Uzunköprü"],
+      "Elazığ": ["Ağın", "Alacakaya", "Arıcak", "Baskil", "Karakoçan", "Keban", "Kovancılar", "Maden", "Merkez", "Palu", "Sivrice"],
+      "Erzincan": ["Çayırlı", "İliç", "Kemah", "Kemaliye", "Merkez", "Otlukbeli", "Refahiye", "Tercan", "Üzümlü"],
+      "Erzurum": ["Aşkale", "Aziziye", "Çat", "Hınıs", "Horasan", "İspir", "Karaçoban", "Karayazı", "Köprüköy", "Narman", "Oltu", "Olur", "Palandöken", "Pasinler", "Pazaryolu", "Şenkaya", "Tekman", "Tortum", "Uzundere", "Yakutiye"],
+      "Eskişehir": ["Alpu", "Beylikova", "Çifteler", "Günyüzü", "Han", "İnönü", "Mahmudiye", "Mihalgazi", "Mihalıççık", "Odunpazarı", "Sarıcakaya", "Seyitgazi", "Sivrihisar", "Tepebaşı"],
+      "Gaziantep": ["Araban", "İslahiye", "Karkamış", "Nizip", "Nurdağı", "Oğuzeli", "Şahinbey", "Şehitkamil", "Yavuzeli"],
+      "Giresun": ["Alucra", "Bulancak", "Çamoluk", "Çanakçı", "Dereli", "Doğankent", "Espiye", "Eynesil", "Görele", "Güce", "Keşap", "Merkez", "Piraziz", "Şebinkarahisar", "Tirebolu", "Yağlıdere"],
+      "Gümüşhane": ["Kelkit", "Köse", "Kürtün", "Merkez", "Şiran", "Torul"],
+      "Hakkari": ["Çukurca", "Derecik", "Merkez", "Şemdinli", "Yüksekova"],
+      "Hatay": ["Altınözü", "Antakya", "Arsuz", "Belen", "Defne", "Dörtyol", "Erzin", "Hassa", "İskenderun", "Kırıkhan", "Kumlu", "Payas", "Reyhanlı", "Samandağ", "Yayladağı"],
+      "Iğdır": ["Aralık", "Karakoyunlu", "Merkez", "Tuzluca"],
+      "Isparta": ["Aksu", "Atabey", "Eğirdir", "Gelendost", "Gönen", "Keçiborlu", "Merkez", "Senirkent", "Sütçüler", "Şarkikaraağaç", "Uluborlu", "Yalvaç", "Yenişarbademli"],
+      "İstanbul": ["Adalar", "Arnavutköy", "Ataşehir", "Avcılar", "Bağcılar", "Bahçelievler", "Bakırköy", "Başakşehir", "Bayrampaşa", "Beşiktaş", "Beykoz", "Beylikdüzü", "Beyoğlu", "Büyükçekmece", "Çatalca", "Çekmeköy", "Esenler", "Esenyurt", "Eyüpsultan", "Fatih", "Gaziosmanpaşa", "Güngören", "Kadıköy", "Kağıthane", "Kartal", "Küçükçekmece", "Maltepe", "Pendik", "Sancaktepe", "Sarıyer", "Silivri", "Sultanbeyli", "Sultangazi", "Şile", "Şişli", "Tuzla", "Ümraniye", "Üsküdar", "Zeytinburnu"],
+      "İzmir": ["Aliağa", "Balçova", "Bayındır", "Bayraklı", "Bergama", "Beydağ", "Bornova", "Buca", "Çeşme", "Çiğli", "Dikili", "Foça", "Gaziemir", "Güzelbahçe", "Karabağlar", "Karaburun", "Karşıyaka", "Kemalpaşa", "Kınık", "Kiraz", "Konak", "Menderes", "Menemen", "Narlıdere", "Ödemiş", "Seferihisar", "Selçuk", "Tire", "Torbalı", "Urla"],
+      "Kahramanmaraş": ["Afşin", "Andırın", "Çağlayancerit", "Dulkadiroğlu", "Ekinözü", "Elbistan", "Göksun", "Nurhak", "Onikişubat", "Pazarcık", "Türkoğlu"],
+      "Karabük": ["Eflani", "Eskipazar", "Merkez", "Ovacık", "Safranbolu", "Yenice"],
+      "Karaman": ["Ayrancı", "Başyayla", "Ermenek", "Merkez", "Kazımkarabekir", "Sarıveliler"],
+      "Kars": ["Akyaka", "Arpaçay", "Digor", "Kağızman", "Merkez", "Sarıkamış", "Selim", "Susuz"],
+      "Kastamonu": ["Abana", "Ağlı", "Araç", "Azdavay", "Bozkurt", "Cide", "Çatalzeytin", "Daday", "Devrekani", "Doğanyurt", "Hanönü", "İhsangazi", "İnebolu", "Küre", "Merkez", "Pınarbaşı", "Seydiler", "Şenpazar", "Taşköprü", "Tosya"],
+      "Kayseri": ["Akkışla", "Bünyan", "Develi", "Felahiye", "Hacılar", "İncesu", "Kocasinan", "Melikgazi", "Özvatan", "Pınarbaşı", "Sarıoğlan", "Sarız", "Talas", "Tomarza", "Yahyalı", "Yeşilhisar"],
+      "Kırıkkale": ["Bahşılı", "Balışeyh", "Çelebi", "Delice", "Karakeçili", "Keskin", "Merkez", "Sulakyurt", "Yahşihan"],
+      "Kırklareli": ["Babaeski", "Demirköy", "Kofçaz", "Lüleburgaz", "Merkez", "Pehlivanköy", "Pınarhisar", "Vize"],
+      "Kırşehir": ["Akçakent", "Akpınar", "Boztepe", "Çiçekdağı", "Kaman", "Merkez", "Mucur"],
+      "Kilis": ["Elbeyli", "Merkez", "Musabeyli", "Polateli"],
+      "Kocaeli": ["Başiskele", "Çayırova", "Darıca", "Derince", "Dilovası", "Gebze", "Gölcük", "İzmit", "Kandıra", "Karamürsel", "Kartepe", "Körfez"],
+      "Konya": ["Ahırlı", "Akören", "Akşehir", "Altınekin", "Beyşehir", "Bozkır", "Cihanbeyli", "Çeltik", "Çumra", "Derbent", "Derebucak", "Doğanhisar", "Emirgazi", "Ereğli", "Güneysınır", "Hadim", "Halkapınar", "Hüyük", "Ilgın", "Kadınhanı", "Karapınar", "Karatay", "Kulu", "Meram", "Sarayönü", "Selçuklu", "Seydişehir", "Taşkent", "Tuzlukçu", "Yalıhüyük", "Yunak"],
+      "Kütahya": ["Altıntaş", "Aslanapa", "Çavdarhisar", "Domaniç", "Dumlupınar", "Emet", "Gediz", "Hisarcık", "Merkez", "Pazarlar", "Simav", "Şaphane", "Tavşanlı"],
+      "Malatya": ["Akçadağ", "Arapgir", "Arguvan", "Battalgazi", "Darende", "Doğanşehir", "Doğanyol", "Hekimhan", "Kale", "Kuluncak", "Pütürge", "Yazıhan", "Yeşilyurt"],
+      "Manisa": ["Ahmetli", "Akhisar", "Alaşehir", "Demirci", "Gölmarmara", "Gördes", "Kırkağaç", "Köprübaşı", "Kula", "Salihli", "Sarıgöl", "Saruhanlı", "Selendi", "Soma", "Şehzadeler", "Turgutlu", "Yunusemre"],
+      "Mardin": ["Artuklu", "Dargeçit", "Derik", "Kızıltepe", "Mazıdağı", "Midyat", "Nusaybin", "Ömerli", "Savur", "Yeşilli"],
+      "Mersin": ["Akdeniz", "Anamur", "Aydıncık", "Bozyazı", "Çamlıyayla", "Erdemli", "Gülnar", "Mezitli", "Mut", "Silifke", "Tarsus", "Toroslar", "Yenişehir"],
+      "Muğla": ["Bodrum", "Dalaman", "Datça", "Fethiye", "Kavaklıdere", "Köyceğiz", "Marmaris", "Menteşe", "Milas", "Ortaca", "Seydikemer", "Ula", "Yatağan"],
+      "Muş": ["Bulanık", "Hasköy", "Korkut", "Malazgirt", "Merkez", "Varto"],
+      "Nevşehir": ["Acıgöl", "Avanos", "Derinkuyu", "Gülşehir", "Hacıbektaş", "Kozaklı", "Merkez", "Ürgüp"],
+      "Niğde": ["Altunhisar", "Bor", "Çamardı", "Çiftlik", "Merkez", "Ulukışla"],
+      "Ordu": ["Akkuş", "Altınordu", "Aybastı", "Çamaş", "Çatalpınar", "Çaybaşı", "Fatsa", "Gölköy", "Gülyalı", "Gürgentepe", "İkizce", "Kabadüz", "Kabataş", "Korgan", "Kumru", "Mesudiye", "Perşembe", "Ulubey", "Ünye"],
+      "Osmaniye": ["Bahçe", "Düziçi", "Hasanbeyli", "Kadirli", "Merkez", "Sumbas", "Toprakkale"],
+      "Rize": ["Ardeşen", "Çamlıhemşin", "Çayeli", "Derepazarı", "Fındıklı", "Güneysu", "Hemşin", "İkizdere", "İyidere", "Kalkandere", "Merkez", "Pazar"],
+      "Sakarya": ["Adapazarı", "Akyazı", "Arifiye", "Erenler", "Ferizli", "Geyve", "Hendek", "Karapürçek", "Karasu", "Kaynarca", "Kocaali", "Pamukova", "Sapanca", "Serdivan", "Söğütlü", "Taraklı"],
+      "Samsun": ["19 Mayıs", "Alaçam", "Asarcık", "Atakum", "Ayvacık", "Bafra", "Canik", "Çarşamba", "Havza", "İlkadım", "Kavak", "Ladik", "Salıpazarı", "Tekkeköy", "Terme", "Vezirköprü", "Yakakent"],
+      "Siirt": ["Baykan", "Eruh", "Kurtalan", "Merkez", "Pervari", "Şirvan", "Tillo"],
+      "Sinop": ["Ayancık", "Boyabat", "Dikmen", "Durağan", "Erfelek", "Gerze", "Merkez", "Saraydüzü", "Türkeli"],
+      "Sivas": ["Akıncılar", "Altınyayla", "Divriği", "Doğanşar", "Gemerek", "Gölova", "Gürün", "Hafik", "İmranlı", "Kangal", "Koyulhisar", "Merkez", "Suşehri", "Şarkışla", "Ulaş", "Yıldızeli", "Zara"],
+      "Şanlıurfa": ["Akçakale", "Birecik", "Bozova", "Ceylanpınar", "Eyyübiye", "Halfeti", "Haliliye", "Harran", "Hilvan", "Karaköprü", "Siverek", "Suruç", "Viranşehir"],
+      "Şırnak": ["Beytüşşebap", "Cizre", "Güçlükonak", "İdil", "Merkez", "Silopi", "Uludere"],
+      "Tekirdağ": ["Çerkezköy", "Çorlu", "Ergene", "Hayrabolu", "Kapaklı", "Malkara", "Marmaraereğlisi", "Muratlı", "Saray", "Süleymanpaşa", "Şarköy"],
+      "Tokat": ["Almus", "Artova", "Başçiftlik", "Erbaa", "Merkez", "Niksar", "Pazar", "Reşadiye", "Sulusaray", "Turhal", "Yeşilyurt", "Zile"],
+      "Trabzon": ["Akçaabat", "Araklı", "Arsin", "Beşikdüzü", "Çarşıbaşı", "Çaykara", "Dernekpazarı", "Düzköy", "Hayrat", "Köprübaşı", "Maçka", "Of", "Ortahisar", "Sürmene", "Şalpazarı", "Tonya", "Vakfıkebir", "Yomra"],
+      "Tunceli": ["Çemişgezek", "Hozat", "Mazgirt", "Merkez", "Nazımiye", "Ovacık", "Pertek", "Pülümür"],
+      "Uşak": ["Banaz", "Eşme", "Karahallı", "Merkez", "Sivaslı", "Ulubey"],
+      "Van": ["Bahçesaray", "Başkale", "Çaldıran", "Çatak", "Edremit", "Erciş", "Gevaş", "Gürpınar", "İpekyolu", "Muradiye", "Özalp", "Saray", "Tuşba"],
+      "Yalova": ["Altınova", "Armutlu", "Çınarcık", "Çiftlikköy", "Merkez", "Termal"],
+      "Yozgat": ["Akdağmadeni", "Aydıncık", "Boğazlıyan", "Çandır", "Çayıralan", "Çekerek", "Kadışehri", "Merkez", "Saraykent", "Sarıkaya", "Sorgun", "Şefaatli", "Yenifakılı", "Yerköy"],
+      "Zonguldak": ["Alaplı", "Çaycuma", "Devrek", "Ereğli", "Gökçebey", "Kilimli", "Kozlu", "Merkez"]
+    };
+
+    function renderReviewDots() {
+      reviewDots.innerHTML = '';
+      reviews.forEach((_, idx) => {
+        const dot = document.createElement('span');
+        dot.style.cssText = `width:10px;height:10px;border-radius:50%;background:${idx === currentReviewIndex ? 'var(--accent-gold)' : 'var(--border-subtle)'};transition:all var(--transition-normal);cursor:pointer;`;
+        dot.addEventListener('click', () => { currentReviewIndex = idx; updateReviewDisplay(); });
+        reviewDots.appendChild(dot);
+      });
+    }
+
+    function updateReviewDisplay() {
+      const review = reviews[currentReviewIndex];
+      let starsHTML = '';
+      for (let i = 0; i < 5; i++) starsHTML += i < review.stars ? '★' : '☆';
+      
+      reviewContainer.style.opacity = '0';
+      reviewContainer.style.transform = 'translateY(12px)';
+      setTimeout(() => {
+        reviewContainer.innerHTML = `
+          <div class="review-header">
+            <img src="${review.avatar}" alt="${review.name}" class="review-avatar" loading="lazy" onerror="this.src='https://i.pravatar.cc/100?u=${review.name}'">
+            <div class="review-user-info">
+              <div class="review-username">${review.name}<span class="verified-badge">✓ Doğrulanmış</span></div>
+              <div class="review-date">${review.date}</div>
+            </div>
+          </div>
+          <div class="review-stars">${starsHTML}</div>
+          <div class="review-text">"${review.text}"</div>`;
+        reviewContainer.style.opacity = '1';
+        reviewContainer.style.transform = 'translateY(0)';
+        renderReviewDots();
+      }, 300);
+    }
+
+    setInterval(() => { currentReviewIndex = (currentReviewIndex + 1) % reviews.length; updateReviewDisplay(); }, 6000);
+    updateReviewDisplay();
+
+    function initIlIlceSelectors() {
+      const ilSelect = document.getElementById('il');
+      const ilceSelect = document.getElementById('ilce');
+      
+      const iller = Object.keys(ilIlceVerileri).sort();
+      iller.forEach(il => {
+        const option = document.createElement('option');
+        option.value = il;
+        option.textContent = il;
+        ilSelect.appendChild(option);
+      });
+
+      ilSelect.addEventListener('change', function() {
+        const secilenIl = this.value;
+        ilceSelect.innerHTML = '';
+        
+        if (secilenIl && ilIlceVerileri[secilenIl]) {
+          const ilceler = [...ilIlceVerileri[secilenIl]].sort();
+          
+          const defaultOption = document.createElement('option');
+          defaultOption.value = '';
+          defaultOption.textContent = 'İlçe Seçiniz';
+          ilceSelect.appendChild(defaultOption);
+          
+          ilceler.forEach(ilce => {
+            const option = document.createElement('option');
+            option.value = ilce;
+            option.textContent = ilce;
+            ilceSelect.appendChild(option);
+          });
+          
+          ilceSelect.disabled = false;
+        } else {
+          const defaultOption = document.createElement('option');
+          defaultOption.value = '';
+          defaultOption.textContent = 'Önce il seçiniz';
+          ilceSelect.appendChild(defaultOption);
+          ilceSelect.disabled = true;
+        }
+      });
+    }
+
+    function showToast(message, type = 'error') {
+      const existingToast = document.querySelector('.toast');
+      if (existingToast) existingToast.remove();
+      const toast = document.createElement('div');
+      toast.className = 'toast';
+      const colors = { error: 'var(--accent-danger)', warning: '#ffb347', success: 'var(--accent-success)' };
+      toast.style.borderColor = colors[type] || colors.error;
+      toast.innerHTML = `<span style="font-weight:600">${message}</span>`;
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 3200);
+    }
+
+    window.showSuccessModal = function() {
+      const overlay = document.createElement('div');
+      overlay.className = 'success-overlay';
+      overlay.innerHTML = `
+        <div class="success-modal">
+          <div class="success-icon">✓</div>
+          <h2 class="success-title font-heading">Siparişiniz Alındı!</h2>
+          <p class="success-text">Tebrikler, siparişiniz başarıyla sistemimize düştü.<br><br>Sipariş onayınız için müşteri temsilcimiz en kısa sürede <strong>WhatsApp üzerinden</strong> sizinle iletişime geçecektir.</p>
+          <div class="success-timer">Bu ekran <span id="countdown">15</span> saniye içinde kapanacaktır...</div>
+        </div>
+      `;
+      document.body.appendChild(overlay);
+      let counter = 15;
+      const interval = setInterval(() => {
+        counter--;
+        const countEl = document.getElementById('countdown');
+        if(countEl) countEl.innerText = counter;
+        if(counter <= 0) clearInterval(interval);
+      }, 1000);
+    };
+
+    function calculateTotal() {
+      return cart.reduce((total, item, index) => {
+        return total + ((index > 0 && campaignSettings.active) ? campaignSettings.secondProductPrice : item.fiyat);
+      }, 0);
+    }
+
+    function initSatisfactionSlider() {
+      const container = document.getElementById('satisfactionContainer');
+      if (!container) return;
+
+      container.innerHTML = satisfactionData.map((item) => `
+        <div class="satisfaction-item" onclick="window.openSatisfactionLightbox('${item.image}', '${item.name}')">
+          <div class="satisfaction-avatar-wrapper">
+            <img src="${item.image}" alt="${item.name}" loading="lazy" onerror="this.src='https://i.hizliresim.com/ek6mt5f.jpg'">
+          </div>
+          <span class="satisfaction-avatar-name">${item.name}</span>
+        </div>
+      `).join('');
+    }
+
+    window.openSatisfactionLightbox = (imageUrl, name) => {
+      const existingLightbox = document.querySelector('.lightbox-overlay');
+      if (existingLightbox) existingLightbox.remove();
+
+      const overlay = document.createElement('div');
+      overlay.className = 'lightbox-overlay';
+      overlay.innerHTML = `
+        <div class="lightbox-content" onclick="event.stopPropagation();" style="text-align: center;">
+          <button class="lightbox-close" onclick="window.closeLightbox()">×</button>
+          <div style="width: 192px; height: 192px; border-radius: 50%; padding: 4px; background: linear-gradient(135deg, var(--accent-gold), var(--accent-electric)); margin: 0 auto 20px; box-shadow: 0 20px 50px rgba(212, 175, 55, 0.3);">
+            <img src="${imageUrl}" alt="${name}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 3px solid var(--bg-surface);" onerror="this.src='https://i.hizliresim.com/ek6mt5f.jpg'">
+          </div>
+          <div class="lightbox-title font-heading" style="font-size: 22px; margin-bottom: 6px;">${name}</div>
+          <div style="color: var(--accent-success); font-size: 12px; margin-bottom: 12px; font-weight:600; font-family:var(--font-heading);">✓ Doğrulanmış Alışveriş</div>
+          <div style="color: var(--accent-gold); font-size: 20px; letter-spacing: 4px; text-shadow:0 0 10px rgba(212,175,55,0.4);">★ ★ ★ ★ ★</div>
+        </div>
+      `;
+
+      overlay.addEventListener('click', window.closeLightbox);
+      
+      const escHandler = (e) => {
+        if (e.key === 'Escape') {
+          window.closeLightbox();
+          document.removeEventListener('keydown', escHandler);
+        }
+      };
+      document.addEventListener('keydown', escHandler);
+
+      document.body.appendChild(overlay);
+      document.body.style.overflow = 'hidden';
+    };
+
+    async function loadSiteSettings() {
+      try {
+        const siteConfigDoc = await getDoc(doc(db, "settings", "siteConfig"));
+        if (siteConfigDoc.exists()) {
+          const settings = siteConfigDoc.data();
+          
+          if (settings.siteTitle) {
+            document.getElementById('pageTitle').textContent = settings.siteTitle;
+            document.title = settings.siteTitle;
+          }
+          if (settings.logoText) document.getElementById('headerLogo').textContent = settings.logoText;
+          if (settings.headerBadge) document.getElementById('headerBadge').textContent = settings.headerBadge;
+          if (settings.whatsappNumber) {
+            const whatsappLink = document.getElementById('whatsappBtn');
+            if (whatsappLink) whatsappLink.href = `https://wa.me/${settings.whatsappNumber}`;
+          }
+          if (settings.whatsappText) document.getElementById('whatsappText').textContent = settings.whatsappText;
+          if (settings.heroTag) document.getElementById('heroTag').textContent = settings.heroTag;
+          if (settings.heroTitle) document.getElementById('heroTitle').innerHTML = settings.heroTitle;
+          if (settings.heroDescription) document.getElementById('campaign-desc').textContent = settings.heroDescription;
+          if (settings.campaignBadge) document.getElementById('campaignBadge').textContent = settings.campaignBadge;
+          if (settings.campaignTitle) document.getElementById('campaignTitle').textContent = settings.campaignTitle;
+          if (settings.campaignPrice) document.getElementById('campaignPrice').textContent = settings.campaignPrice;
+          if (settings.campaignSubtitle) document.getElementById('campaignSubtitle').textContent = settings.campaignSubtitle;
+          if (settings.reviewsTitle) document.getElementById('reviewsTitle').textContent = settings.reviewsTitle;
+          if (settings.faqTitle) document.getElementById('faqTitle').textContent = settings.faqTitle;
+          if (settings.footerText) document.getElementById('footerText').textContent = settings.footerText;
+          
+          if (settings.headCode) {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = settings.headCode;
+            
+            const scripts = tempDiv.querySelectorAll('script');
+            const otherElements = [];
+            
+            Array.from(tempDiv.children).forEach(child => {
+              if (child.tagName !== 'SCRIPT') {
+                otherElements.push(child);
+              }
+            });
+            
+            otherElements.forEach(el => {
+              document.head.appendChild(el.cloneNode(true));
+            });
+            
+            let scriptIndex = 0;
+            
+            function loadNextScript() {
+              if (scriptIndex < scripts.length) {
+                const originalScript = scripts[scriptIndex];
+                const newScript = document.createElement('script');
+                
+                Array.from(originalScript.attributes).forEach(attr => {
+                  newScript.setAttribute(attr.name, attr.value);
+                });
+                
+                if (originalScript.textContent) {
+                  newScript.textContent = originalScript.textContent;
+                }
+                
+                if (originalScript.src) {
+                  newScript.onload = () => {
+                    scriptIndex++;
+                    loadNextScript();
+                  };
+                  newScript.onerror = () => {
+                    console.warn('Head script yüklenemedi:', originalScript.src);
+                    scriptIndex++;
+                    loadNextScript();
+                  };
+                } else {
+                  setTimeout(() => {
+                    scriptIndex++;
+                    loadNextScript();
+                  }, 50);
+                }
+                
+                document.head.appendChild(newScript);
+                
+                if (!originalScript.src) {
+                  scriptIndex++;
+                  loadNextScript();
+                }
+              } else {
+                console.log('✅ Tüm head kodları başarıyla yüklendi');
+              }
+            }
+            
+            if (scripts.length > 0) {
+              loadNextScript();
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Site ayarları yüklenirken hata:', error);
+      }
+    }
+
+    async function initSystem() {
+      try {
+        window.AKTIF_DOMAIN = window.location.hostname;
+        console.log('📌 Siparişin geldiği site:', window.AKTIF_DOMAIN);
+
+        await loadSiteSettings();
+
+        const campDoc = await getDoc(doc(db, "settings", "campaign"));
+        if (campDoc.exists()) {
+          campaignSettings = campDoc.data();
+          if (campaignSettings.active && campaignSettings.message) {
+            document.getElementById('campaign-desc').innerText = campaignSettings.message;
+          }
+          if (!campaignSettings.minOrderCount) campaignSettings.minOrderCount = 1;
+        }
+        
+        initIlIlceSelectors();
+        await loadProducts();
+        initSatisfactionSlider();
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+          const header = document.getElementById('mainHeader');
+          if (window.scrollY > 10) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        });
+      } catch (err) {
+        console.error('Sistem başlatılırken hata:', err);
+        document.getElementById('loading').innerText = "Yüklenirken bir hata oluştu.";
+      }
+    }
+
+    async function loadProducts() {
+      const querySnapshot = await getDocs(collection(db, "products"));
+      const listDiv = document.getElementById('product-list');
+      document.getElementById('loading').style.display = 'none';
+      listDiv.innerHTML = '';
+
+      const productsArray = [];
+      querySnapshot.forEach((doc) => {
+        const p = { id: doc.id, ...doc.data() };
+        if (!p.aktif) return;
+        productsArray.push(p);
+      });
+
+      productsArray.sort((a, b) => {
+        const dateA = a.eklenmeTarihi ? a.eklenmeTarihi.toDate() : new Date(0);
+        const dateB = b.eklenmeTarihi ? b.eklenmeTarihi.toDate() : new Date(0);
+        return dateA - dateB;
+      });
+
+      productsArray.forEach((p) => {
+        allProducts.push(p);
+        
+        let variantBoxes = (p.varyantlar || []).map(v => `
+          <div onclick="event.stopPropagation(); window.addToCart('${p.id}', '${v}')" class="variant-box">
+            ${v}
+          </div>
+        `).join('');
+
+        listDiv.innerHTML += `
+          <div class="card-light">
+            <div class="card-img-wrapper" onclick="event.stopPropagation(); window.openLightbox('${p.resim}', '${p.isim.replace(/'/g, "\\'")}', ${p.fiyat})">
+              <div class="badge-hot">✦ Çok Satan</div>
+              <img src="${p.resim}" alt="${p.isim}" loading="lazy">
+              <div class="badge-zoom">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title font-heading">${p.isim}</h3>
+              <hr class="card-divider">
+              <div class="variant-label">${p.varyantAdi || 'NUMARA SEÇ'}</div>
+              <div class="variant-grid">
+                ${variantBoxes}
+              </div>
+            </div>
+          </div>`;
+      });
+    }
+
+    window.openLightbox = (imageUrl, productName, productPrice) => {
+      const existingLightbox = document.querySelector('.lightbox-overlay');
+      if (existingLightbox) existingLightbox.remove();
+
+      const overlay = document.createElement('div');
+      overlay.className = 'lightbox-overlay';
+      overlay.innerHTML = `
+        <div class="lightbox-content" onclick="event.stopPropagation();">
+          <button class="lightbox-close" onclick="window.closeLightbox()">×</button>
+          <img src="${imageUrl}" alt="${productName}" class="lightbox-image" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22><rect fill=%22%2314141e%22 width=%22300%22 height=%22300%22/><text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23a0a0b0%22 font-size=%2214%22>Resim Yüklenemedi</text></svg>'">
+          <div class="lightbox-info">
+            <div class="lightbox-title font-heading">${productName}</div>
+            <div class="lightbox-price">${productPrice} ₺</div>
+          </div>
+        </div>
+      `;
+
+      overlay.addEventListener('click', window.closeLightbox);
+      
+      const escHandler = (e) => {
+        if (e.key === 'Escape') {
+          window.closeLightbox();
+          document.removeEventListener('keydown', escHandler);
+        }
+      };
+      document.addEventListener('keydown', escHandler);
+
+      document.body.appendChild(overlay);
+      document.body.style.overflow = 'hidden';
+
+      const product = allProducts.find(p => p.isim === productName);
+      if (product) {
+        FacebookPixel.trackViewContent(product);
+        TikTokPixel.trackViewContent(product);
+      }
+    };
+
+    window.closeLightbox = () => {
+      const lightbox = document.querySelector('.lightbox-overlay');
+      if (lightbox) {
+        lightbox.style.opacity = '0';
+        lightbox.style.transition = 'opacity 0.3s';
+        setTimeout(() => {
+          lightbox.remove();
+          document.body.style.overflow = '';
+        }, 300);
+      }
+    };
+
+    window.viewProduct = (id) => {
+      const product = allProducts.find(p => p.id === id);
+      if (product) {
+        FacebookPixel.trackViewContent(product);
+        TikTokPixel.trackViewContent(product);
+      }
+    };
+
+    window.addToCart = (id, selectedVariant = '') => {
+      const product = allProducts.find(p => p.id === id);
+      if (!product) return;
+      
+      cart.push({ ...product, cartId: Date.now(), secilenVaryant: selectedVariant });
+      
+      FacebookPixel.trackAddToCart(product);
+      TikTokPixel.trackAddToCart(product);
+      updateUI(); 
+      showToast(`✓ ${product.isim} (${selectedVariant}) sepete eklendi`, 'success');
+    };
+
+    window.removeFromCart = (cartId) => {
+      const removedItem = cart.find(item => item.cartId === cartId);
+      cart = cart.filter(item => item.cartId !== cartId);
+      if (removedItem && typeof fbq === 'function') {
+        fbq('track', 'RemoveFromCart', { content_name: removedItem.isim, content_ids: [removedItem.id], content_type: 'product', value: removedItem.fiyat, currency: 'TRY' });
+      }
+      updateUI();
+    };
+
+    window.handleVariantChange = (cartId) => {
+      const selectEl = document.getElementById(`variant-${cartId}`);
+      const item = cart.find(i => i.cartId === cartId);
+      if (item && selectEl) {
+        item.secilenVaryant = selectEl.value;
+      }
+      updateUI();
+    };
+
+    window.processStickyClick = () => {
+      const min = campaignSettings.minOrderCount || 1;
+
+      if (cart.length === 0) {
+        showToast('⚠ Lütfen önce ürün seçin', 'warning');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+      
+      if (cart.length < min) {
+        showToast(`⚠ En az ${min} ürün seçmelisiniz.`, 'warning');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+
+      const hasMissingVariants = cart.some(item => !item.secilenVaryant || item.secilenVaryant === "");
+      if (hasMissingVariants) {
+        showToast('⚠ Lütfen eksik beden/varyant seçimlerini tamamlayın.', 'warning');
+        document.getElementById('order-section').scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+      
+      document.getElementById('submitBtn').click();
+    };
+
+    function updateUI() {
+      const stickyBar = document.getElementById('sticky-bar');
+      const stickyBtn = document.getElementById('sticky-checkout-btn');
+      const orderSection = document.getElementById('order-section');
+      const cartCount = document.getElementById('cart-count');
+      const totalDisplay = document.getElementById('total-price-display');
+      const summaryDiv = document.getElementById('cart-items-summary');
+      const submitBtn = document.getElementById('submitBtn');
+      const warningBanner = document.getElementById('order-warning-banner');
+      const warningTitle = document.getElementById('warning-title');
+      const warningMessage = document.getElementById('warning-message');
+      const min = campaignSettings.minOrderCount || 1;
+
+      const hasMissingVariants = cart.some(item => !item.secilenVaryant || item.secilenVaryant === "");
+
+      stickyBar.style.display = cart.length > 0 ? 'flex' : 'none';
+      orderSection.classList.toggle('hidden', cart.length === 0);
+
+      if (cart.length === 0) {
+        window._hasAutoScrolledToForm = false;
+        warningBanner.className = 'warning-banner danger';
+        warningTitle.innerText = '⚠ Ürün Seçimi Gerekli';
+        warningMessage.innerText = `Sipariş verebilmek için lütfen yukarıdan en az ${min} ürün seçin.`;
+        
+        submitBtn.disabled = true;
+        submitBtn.classList.remove('active');
+        submitBtn.innerText = `${min} ürün seçmeniz gerekiyor`;
+        
+        stickyBtn.classList.remove('active');
+        stickyBtn.innerText = 'Eksik Ürün Var';
+
+      } else if (cart.length < min) {
+        window._hasAutoScrolledToForm = false;
+        warningBanner.className = 'warning-banner danger';
+        warningTitle.innerText = '⚠ Ürün Seçimi Eksik';
+        warningMessage.innerText = `En az ${min} ürün seçmelisiniz. Şu anda sepetinizde ${cart.length} ürün var. ${min - cart.length} ürün daha ekleyin.`;
+        
+        submitBtn.disabled = true;
+        submitBtn.classList.remove('active');
+        submitBtn.innerText = `${min - cart.length} ürün daha seçmelisiniz`;
+        
+        stickyBtn.classList.remove('active');
+        stickyBtn.innerText = `${min - cart.length} Ürün Daha Seçin`;
+
+      } else if (hasMissingVariants) {
+        window._hasAutoScrolledToForm = false;
+        warningBanner.className = 'warning-banner warning';
+        warningTitle.innerText = '⚠ Beden/Varyant Seçimi Eksik';
+        warningMessage.innerText = 'Lütfen sepetteki ürünler için numara/beden seçimi yapın. Kırmızı renkli kısımları doldurun.';
+        
+        submitBtn.disabled = true;
+        submitBtn.classList.remove('active');
+        submitBtn.innerText = '⚠ Lütfen tüm seçimleri tamamlayın';
+
+        stickyBtn.classList.remove('active');
+        stickyBtn.innerText = 'Numara/Beden Seçin';
+
+      } else {
+        warningBanner.className = 'warning-banner success';
+        warningTitle.innerText = '✓ Siparişe Hazırsınız';
+        warningMessage.innerText = 'Tüm seçimler tamamlandı. Aşağıdaki formu doldurarak siparişinizi onaylayabilirsiniz.';
+        
+        submitBtn.disabled = false;
+        submitBtn.classList.add('active');
+        submitBtn.innerText = '✨ SİPARİŞİ ONAYLA';
+
+        stickyBtn.classList.add('active');
+        stickyBtn.innerText = 'Siparişi Tamamla';
+
+        if (!window._hasAutoScrolledToForm) {
+          const total = calculateTotal();
+          FacebookPixel.trackInitiateCheckout(cart, total);
+          TikTokPixel.trackInitiateCheckout(cart, total); 
+          setTimeout(() => {
+            document.getElementById('order-section').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('adSoyad').focus();
+          }, 300);
+          window._hasAutoScrolledToForm = true;
+        }
+      }
+
+      let total = 0;
+      summaryDiv.innerHTML = '';
+      
+      cart.forEach((item, index) => {
+        const price = (index > 0 && campaignSettings.active) ? campaignSettings.secondProductPrice : item.fiyat;
+        total += price;
+        const variantName = item.varyantAdi || 'Beden';
+        
+        const selectErrorClass = (!item.secilenVaryant || item.secilenVaryant === "") ? "error" : "";
+        const warningDisplay = selectErrorClass ? "flex" : "none";
+        const itemErrorClass = selectErrorClass ? "missing-variant" : "";
+
+        const variantOptions = (item.varyantlar || []).map(v => 
+          `<option value="${v}" ${item.secilenVaryant === v ? 'selected' : ''}>${v}</option>`
+        ).join('');
+        
+        summaryDiv.innerHTML += `
+          <div class="cart-item ${itemErrorClass}" id="cart-item-${item.cartId}">
+            <button onclick="window.removeFromCart(${item.cartId})" class="remove-btn">✕ Kaldır</button>
+            <img src="${item.resim}" alt="${item.isim}">
+            <div class="cart-item-details">
+              <div style="font-weight:600; margin-bottom:6px; font-size:15px; color:var(--text-primary); font-family:var(--font-heading);">${item.isim}</div>
+              <div style="color:var(--accent-gold); font-weight:700; margin-bottom:10px; font-size:18px; font-family:var(--font-heading);">${price} ₺</div>
+              <select id="variant-${item.cartId}" class="variant-select ${selectErrorClass}" onchange="window.handleVariantChange(${item.cartId})" required>
+                <option value="">${variantName} Seçiniz *</option>
+                ${variantOptions}
+              </select>
+              <div class="variant-warning" style="display:${warningDisplay}">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                Lütfen ${variantName.toLowerCase()} seçin
+              </div>
+            </div>
+          </div>`;
+      });
+
+      cartCount.innerText = `${cart.length} ÜRÜN`;
+      totalDisplay.innerText = total.toFixed(2) + ' ₺';
+    }
+
+    document.getElementById('orderForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const telInput = document.getElementById('telefon').value;
+      if (telInput.length !== 11 || !telInput.startsWith('05')) {
+        showToast('⚠ Lütfen 05 ile başlayan 11 haneli geçerli bir numara girin.', 'error');
+        return;
+      }
+      
+      const hasMissingVariants = cart.some(item => !item.secilenVaryant || item.secilenVaryant === "");
+      if (hasMissingVariants) {
+        showToast('⚠ Lütfen tüm ürünler için beden/varyant seçimi yapın', 'error');
+        document.getElementById('order-section').scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+      
+      const btn = document.getElementById('submitBtn');
+      btn.disabled = true;
+      btn.innerText = "⏳ İŞLENİYOR...";
+      
+      try {
+        let currentIp = "";
+        try {
+          const ip = await (await fetch('https://api.ipify.org?format=json')).json();
+          currentIp = ip.ip;
+        } catch(e) {}
+        
+        const totalTutar = calculateTotal();
+        const orderRef = await addDoc(collection(db, "orders"), {
+          musteri: {
+            adSoyad: document.getElementById('adSoyad').value,
+            tel: document.getElementById('telefon').value,
+            il: document.getElementById('il').value,
+            ilce: document.getElementById('ilce').value,
+            adres: document.getElementById('adres').value,
+            mesaj: document.getElementById('mesaj').value
+          },
+          urunler: cart.map(i => ({ id: i.id, isim: i.isim, varyant: i.secilenVaryant })),
+          toplamTutar: totalTutar.toFixed(2) + ' ₺',
+          ip: currentIp,
+          tarih: serverTimestamp(),
+          durum: 'yeni',
+          kaynakSite: window.AKTIF_DOMAIN || window.location.hostname  
+        });
+        
+        const customerInfo = {
+          phone: document.getElementById('telefon').value,
+          firstName: document.getElementById('adSoyad').value.split(' ')[0],
+          lastName: document.getElementById('adSoyad').value.split(' ').slice(1).join(' '),
+          city: document.getElementById('il').value,
+          zip: document.getElementById('ilce').value
+        };
+        
+        FacebookPixel.trackPurchase(orderRef.id, cart, totalTutar, customerInfo);
+        TikTokPixel.trackCompletePayment(orderRef.id, cart, totalTutar, customerInfo);
+        
+        window.showSuccessModal();
+        setTimeout(() => location.reload(), 15000);
+
+      } catch (err) {
+        showToast('❌ Hata: ' + err.message, 'error');
+        btn.disabled = false;
+        btn.innerText = '✨ SİPARİŞİ ONAYLA';
+      }
+    });
+
+    initSystem();
+  </script>
+</body>
+</html>
