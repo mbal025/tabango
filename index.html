@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
   <title id="pageTitle">SOLE & CO | Premium Koleksiyon</title>
- 
+  <meta name="facebook-domain-verification" content="ltt9dng4fc87p9kbup0aqdu0o2khf8" />
   
   <!-- Google Fonts: Inter + Manrope -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 <script>
-    let FB_PIXEL_ID = ''; 
+    let FB_PIXEL_ID = '1530550253'; 
     window.TT_PIXEL_ID = '';
   
     window.addEventListener('DOMContentLoaded', async () => {
@@ -428,115 +428,445 @@ const firebaseConfig = {
     }
 
     /* ===== SATISFACTION SLIDER ===== */
-    .satisfaction-slider { 
-      margin: 32px 0 28px; 
-      padding: 0 8px;
-    }
-    .satisfaction-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 18px;
-      padding: 0 8px;
-    }
-    .satisfaction-title {
-      font-family: var(--font-heading);
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--text-primary);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .satisfaction-badge {
-      background: linear-gradient(135deg, var(--accent-gold), var(--accent-electric));
-      color: var(--bg-base);
-      font-size: 10px;
-      font-weight: 700;
-      padding: 5px 14px;
-      border-radius: var(--radius-full);
-      letter-spacing: 1px;
-    }
-    
-    .satisfaction-container {
-      display: flex;
-      gap: 14px;
-      overflow-x: auto;
-      padding: 4px 4px 16px;
-      scrollbar-width: none;
-      -webkit-overflow-scrolling: touch;
-      scroll-snap-type: x mandatory;
-    }
-    .satisfaction-container::-webkit-scrollbar { display: none; }
-    
-    .satisfaction-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 14px 18px;
-      cursor: pointer;
-      flex-shrink: 0;
-      transition: all var(--transition-normal);
-      scroll-snap-align: start;
-      min-width: 84px;
-    }
-    .satisfaction-item:hover {
-      border-color: var(--accent-gold);
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-md);
-    }
-    .satisfaction-item:active { transform: scale(0.97); }
-    
-    .satisfaction-avatar-wrapper {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      padding: 2px;
-      background: linear-gradient(135deg, var(--accent-gold), var(--accent-electric));
-      flex-shrink: 0;
-      position: relative;
-    }
-    .satisfaction-avatar-wrapper::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-      padding: 2px;
-      background: linear-gradient(135deg, var(--accent-electric), var(--accent-gold));
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      opacity: 0;
-      transition: opacity var(--transition-fast);
-    }
-    .satisfaction-item:hover .satisfaction-avatar-wrapper::after {
-      opacity: 1;
-    }
-    .satisfaction-avatar-wrapper img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--bg-surface);
-    }
-    .satisfaction-avatar-name {
-      color: var(--text-secondary);
-      font-size: 11px;
-      font-weight: 600;
-      max-width: 72px;
-      text-align: center;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      transition: color var(--transition-fast);
-    }
-    .satisfaction-item:hover .satisfaction-avatar-name {
-      color: var(--accent-gold);
-    }
+/* ===== YENİ SATISFACTION SECTION STYLES ===== */
+.satisfaction-section {
+  padding: 48px 20px 32px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, transparent 0%, rgba(212, 175, 55, 0.02) 50%, transparent 100%);
+}
+
+/* Glow Orbs Background */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.4;
+  pointer-events: none;
+  animation: floatOrb 8s ease-in-out infinite;
+}
+.orb-1 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, var(--accent-gold), transparent 70%);
+  top: -100px;
+  right: -50px;
+  animation-delay: 0s;
+}
+.orb-2 {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, var(--accent-electric), transparent 70%);
+  bottom: -80px;
+  left: -30px;
+  animation-delay: -4s;
+}
+@keyframes floatOrb {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(20px, -20px) scale(1.05); }
+}
+
+/* Header Glass */
+.satisfaction-header-glass {
+  text-align: center;
+  padding: 24px 16px 32px;
+  position: relative;
+  z-index: 2;
+}
+
+.title-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(0, 212, 255, 0.1));
+  color: var(--accent-gold);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  margin-bottom: 16px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  backdrop-filter: blur(10px);
+  animation: pulseSoft 3s ease-in-out infinite;
+}
+@keyframes pulseSoft {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.2); }
+  50% { box-shadow: 0 0 0 12px rgba(212, 175, 55, 0); }
+}
+
+.satisfaction-main-title {
+  font-size: clamp(24px, 5vw, 32px);
+  font-weight: 800;
+  margin-bottom: 12px;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
+
+.satisfaction-subtitle {
+  color: var(--text-secondary);
+  font-size: 15px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Stats Grid */
+.satisfaction-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin: 24px 0 32px;
+}
+@media (min-width: 600px) {
+  .satisfaction-stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+}
+
+.stat-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 20px 16px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  cursor: default;
+}
+.stat-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(45deg, transparent, var(--accent-gold), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  pointer-events: none;
+}
+.stat-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-gold);
+  box-shadow: var(--shadow-lg), 0 0 24px rgba(212, 175, 55, 0.1);
+}
+.stat-card:hover::before { opacity: 1; }
+
+.stat-icon-wrapper {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stat-icon {
+  font-size: 22px;
+  position: relative;
+  z-index: 2;
+}
+.stat-glow-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-electric));
+  opacity: 0.2;
+  animation: rotateGlow 3s linear infinite;
+  z-index: 1;
+}
+@keyframes rotateGlow {
+  to { transform: rotate(360deg); }
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent-gold);
+  margin-bottom: 4px;
+  text-shadow: 0 0 12px var(--text-glow);
+}
+.stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.stat-progress {
+  height: 3px;
+  background: var(--border-subtle);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+.stat-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-electric));
+  border-radius: inherit;
+  transition: width 1s ease-out;
+}
+
+/* Testimonial Grid */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+@media (min-width: 768px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.testimonial-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 22px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  min-height: 240px;
+}
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(212,175,55,0.03), rgba(0,212,255,0.02));
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  pointer-events: none;
+}
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-gold);
+  box-shadow: var(--shadow-lg), 0 0 32px rgba(212, 175, 55, 0.15);
+}
+.testimonial-card:hover::before { opacity: 1; }
+
+.card-gradient-border {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(45deg, transparent, var(--accent-gold), var(--accent-electric), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  pointer-events: none;
+  z-index: 1;
+}
+.testimonial-card:hover .card-gradient-border { opacity: 1; }
+
+.featured {
+  border-color: var(--accent-gold);
+  background: linear-gradient(135deg, var(--bg-surface), rgba(212, 175, 55, 0.05));
+}
+.featured-ribbon {
+  position: absolute;
+  top: 16px;
+  right: -32px;
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-electric));
+  color: var(--bg-base);
+  font-size: 10px;
+  font-weight: 800;
+  padding: 4px 40px;
+  transform: rotate(45deg);
+  letter-spacing: 1px;
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.4);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 2;
+}
+.user-avatar-stack {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-electric));
+  flex-shrink: 0;
+}
+.avatar-main {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--bg-surface);
+}
+.verified-badge-mini {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 18px;
+  height: 18px;
+  background: var(--accent-success);
+  color: var(--bg-base);
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--bg-surface);
+}
+.user-meta { flex: 1; min-width: 0; }
+.user-name {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+.user-location {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.stars-mini {
+  color: var(--accent-gold);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 6px rgba(212, 175, 55, 0.4);
+}
+
+.testimonial-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+.testimonial-text::before {
+  content: '"';
+  position: absolute;
+  top: -8px;
+  left: -4px;
+  font-size: 32px;
+  color: var(--accent-gold);
+  opacity: 0.2;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.testimonial-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-subtle);
+  position: relative;
+  z-index: 2;
+}
+.purchase-tag {
+  font-size: 10px;
+  color: var(--accent-electric);
+  font-weight: 600;
+  background: rgba(0, 212, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.5px;
+}
+.testimonial-date {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.card-hover-effect {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+    rgba(212, 175, 55, 0.1), transparent 40%);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  pointer-events: none;
+  z-index: 1;
+}
+.testimonial-card:hover .card-hover-effect { opacity: 1; }
+
+/* Trust Badges */
+.trust-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-surface-elevated);
+  padding: 10px 18px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+.trust-badge:hover {
+  border-color: var(--accent-gold);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+.trust-icon { font-size: 16px; }
+
+/* Glass Card Base */
+.glass-card {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(20, 20, 30, 0.6);
+}
+
+/* Tilt Effect (JS ile tetiklenir) */
+[data-tilt] {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Counter Animation */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.stat-value {
+  animation: countUp 0.6s ease-out forwards;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  .satisfaction-section { padding: 64px 0 48px; }
+  .testimonial-card { min-height: 260px; }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .glow-orb, .stat-glow-ring, .card-hover-effect {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+
+
+
+
 
     /* ===== PRODUCT GRID ===== */
     .products-section { padding: 16px 0 32px; }
@@ -1626,11 +1956,11 @@ const firebaseConfig = {
     </a>
   </header>
 
-  <section class="hero">
+  <!--<section class="hero">
     <span class="hero-tag" id="heroTag">✦ Yeni Sezon</span>
     <h1 class="font-heading text-gradient-gold text-glow" id="heroTitle">İki adet 1.200 ₺<br><span class="text-gradient-electric">Şeffaf Kargo</span></h1>
     <p id="campaign-desc">İki ürün seç.</p>
-  </section>
+  </section>-->
 
   <main class="container products-section">
     <div id="loading">KOLEKSİYON YÜKLENİYOR</div>
@@ -1642,22 +1972,8 @@ const firebaseConfig = {
       <div class="campaign-subtitle" id="campaignSubtitle">Kapıda Ödeme · Ücretsiz Kargo</div>
       <div class="campaign-stars">★ ★ ★ ★ ★</div>
     </div>
-
-    <div class="satisfaction-slider">
-      <div class="satisfaction-header">
-        <div class="satisfaction-title font-heading">
-          <span style="color:var(--accent-gold); font-size:18px;">✦</span>
-          Müşteri Memnuniyeti
-        </div>
-        <span class="satisfaction-badge">YENİ</span>
-      </div>
-      <div class="satisfaction-container" id="satisfactionContainer"></div>
-    </div>
-
-    <div id="product-list" class="product-grid"></div>
-  </main>
-
-  <div id="sticky-bar" class="sticky-bar">
+ <div id="product-list" class="product-grid"></div>
+ <div id="sticky-bar" class="sticky-bar">
     <div class="sticky-info">
       <div id="cart-count">0 ÜRÜN</div>
       <div id="total-price-display">0.00 ₺</div>
@@ -1719,6 +2035,163 @@ const firebaseConfig = {
       </form>
     </div>
   </section>
+   </main>
+<!-- ===== YENİ SATISFACTION SECTION (Eski slider yerine) ===== -->
+<section class="satisfaction-section">
+  <div class="satisfaction-header-glass">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    
+    <div class="satisfaction-title-wrapper">
+      <span class="title-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        %98.7 Memnuniyet
+      </span>
+      <h3 class="satisfaction-main-title font-heading">
+        Müşterilerimiz <span class="text-gradient-electric">Neden</span> Bizi Seçiyor?
+      </h3>
+      <p class="satisfaction-subtitle">Gerçek alışveriş deneyimleri, doğrulanmış yorumlar</p>
+    </div>
+  </div>
+
+  <!-- Stats Grid -->
+  <div class="satisfaction-stats-grid">
+    <div class="stat-card glass-card" data-hover-glow>
+      <div class="stat-icon-wrapper">
+        <span class="stat-icon">🚀</span>
+        <div class="stat-glow-ring"></div>
+      </div>
+      <div class="stat-value font-heading" data-count="48">0</div>
+      <div class="stat-label">Saatte Ortalama Teslimat</div>
+      <div class="stat-progress"><div class="stat-progress-fill" style="width:92%"></div></div>
+    </div>
+    
+    <div class="stat-card glass-card" data-hover-glow>
+      <div class="stat-icon-wrapper">
+        <span class="stat-icon">💬</span>
+        <div class="stat-glow-ring"></div>
+      </div>
+      <div class="stat-value font-heading" data-count="4.9">0</div>
+      <div class="stat-label">Ortalama Puan (5 üzerinden)</div>
+      <div class="stat-progress"><div class="stat-progress-fill" style="width:98%"></div></div>
+    </div>
+    
+    <div class="stat-card glass-card" data-hover-glow>
+      <div class="stat-icon-wrapper">
+        <span class="stat-icon">🔄</span>
+        <div class="stat-glow-ring"></div>
+      </div>
+      <div class="stat-value font-heading" data-count="14">0</div>
+      <div class="stat-label">Gün Koşulsuz İade Garantisi</div>
+      <div class="stat-progress"><div class="stat-progress-fill" style="width:100%"></div></div>
+    </div>
+    
+    <div class="stat-card glass-card" data-hover-glow>
+      <div class="stat-icon-wrapper">
+        <span class="stat-icon">🛡️</span>
+        <div class="stat-glow-ring"></div>
+      </div>
+      <div class="stat-value font-heading" data-count="100">0</div>
+      <div class="stat-label">% Güvenli Ödeme</div>
+      <div class="stat-progress"><div class="stat-progress-fill" style="width:100%"></div></div>
+    </div>
+  </div>
+
+  <!-- Testimonial Cards Grid -->
+  <div class="testimonial-grid">
+    <!-- Card 1 -->
+    <article class="testimonial-card glass-card" data-tilt>
+      <div class="card-gradient-border"></div>
+      <div class="testimonial-header">
+        <div class="user-avatar-stack">
+          <img src="https://i.pravatar.cc/100?img=11" alt="Mustafa" class="avatar-main" loading="lazy">
+          <span class="verified-badge-mini">✓</span>
+        </div>
+        <div class="user-meta">
+          <strong class="user-name">Mustafa A.</strong>
+          <span class="user-location">📍 İstanbul</span>
+        </div>
+        <div class="stars-mini">★★★★★</div>
+      </div>
+      <p class="testimonial-text">"2. siparişim ve yine mükemmel! Kargo hızı inanılmaz, ürün kalitesi fotoğraftakinden bile iyi."</p>
+      <div class="testimonial-footer">
+        <span class="purchase-tag">🛒 2 Ürün Aldı</span>
+        <time class="testimonial-date">2 gün önce</time>
+      </div>
+      <div class="card-hover-effect"></div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="testimonial-card glass-card" data-tilt>
+      <div class="card-gradient-border"></div>
+      <div class="testimonial-header">
+        <div class="user-avatar-stack">
+          <img src="https://i.pravatar.cc/100?img=5" alt="Zeynep" class="avatar-main" loading="lazy">
+          <span class="verified-badge-mini">✓</span>
+        </div>
+        <div class="user-meta">
+          <strong class="user-name">Zeynep K.</strong>
+          <span class="user-location">📍 Ankara</span>
+        </div>
+        <div class="stars-mini">★★★★★</div>
+      </div>
+      <p class="testimonial-text">"Kampanya fiyatına 2 ürün aldım, ikisi de harika. Müşteri hizmetleri WhatsApp'tan anında döndü."</p>
+      <div class="testimonial-footer">
+        <span class="purchase-tag">🎁 Kampanya</span>
+        <time class="testimonial-date">5 gün önce</time>
+      </div>
+      <div class="card-hover-effect"></div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="testimonial-card glass-card featured" data-tilt>
+      <div class="card-gradient-border"></div>
+      <div class="featured-ribbon">✨ Öne Çıkan</div>
+      <div class="testimonial-header">
+        <div class="user-avatar-stack">
+          <img src="https://i.pravatar.cc/100?img=12" alt="Mehmet" class="avatar-main" loading="lazy">
+          <span class="verified-badge-mini">✓</span>
+        </div>
+        <div class="user-meta">
+          <strong class="user-name">Mehmet D.</strong>
+          <span class="user-location">📍 İzmir</span>
+        </div>
+        <div class="stars-mini">★★★★★</div>
+      </div>
+      <p class="testimonial-text">"Deri kalitesi, dikiş detayları... Gerçekten premium seviye. Fiyat/performans şampiyonu!"</p>
+      <div class="testimonial-footer">
+        <span class="purchase-tag">⭐ Tekrar Alan</span>
+        <time class="testimonial-date">1 hafta önce</time>
+      </div>
+      <div class="card-hover-effect"></div>
+    </article>
+  </div>
+
+  <!-- Trust Badges Row -->
+  <div class="trust-badges-row">
+    <div class="trust-badge">
+      <span class="trust-icon">🔒</span>
+      <span class="trust-text">SSL Güvenli Ödeme</span>
+    </div>
+    <div class="trust-badge">
+      <span class="trust-icon">📦</span>
+      <span class="trust-text">Şeffaf Kargo Takip</span>
+    </div>
+    <div class="trust-badge">
+      <span class="trust-icon">💬</span>
+      <span class="trust-text">7/24 Canlı Destek</span>
+    </div>
+    <div class="trust-badge">
+      <span class="trust-icon">🔄</span>
+      <span class="trust-text">Kolay İade</span>
+    </div>
+  </div>
+</section>
+
+  
+
+
+  
 
   <section class="reviews-section">
     <div class="container" style="padding:0; max-width:680px;">
@@ -1736,7 +2209,8 @@ const firebaseConfig = {
     <details><summary class="font-heading">❓ Ürünler orijinal mi?</summary><div class="faq-answer">Koleksiyonumuzdaki tüm ürünler, global standartlarda üretilmiş 1. sınıf premium ithal ürünlerdir.</div></details>
   </section>
 
-  <footer id="footerText">© 2024 SOLE & CO. Tüm hakları saklıdır.</footer>
+  <footer id="footerText">© 2026 Taban & GO. Tüm hakları saklıdır.</footer>
+  
 
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
@@ -2079,19 +2553,102 @@ const firebaseConfig = {
       }, 0);
     }
 
-    function initSatisfactionSlider() {
-      const container = document.getElementById('satisfactionContainer');
-      if (!container) return;
+// ===== YENİ SATISFACTION SECTION JS =====
 
-      container.innerHTML = satisfactionData.map((item) => `
-        <div class="satisfaction-item" onclick="window.openSatisfactionLightbox('${item.image}', '${item.name}')">
-          <div class="satisfaction-avatar-wrapper">
-            <img src="${item.image}" alt="${item.name}" loading="lazy" onerror="this.src='https://i.hizliresim.com/ek6mt5f.jpg'">
-          </div>
-          <span class="satisfaction-avatar-name">${item.name}</span>
-        </div>
-      `).join('');
-    }
+// Animated Counter for Stats
+function animateCounters() {
+  const counters = document.querySelectorAll('.stat-value[data-count]');
+  
+  counters.forEach(counter => {
+    const target = parseFloat(counter.dataset.count);
+    const duration = 1200;
+    const start = 0;
+    const increment = target / (duration / 16);
+    let current = start;
+    
+    const updateCounter = () => {
+      current += increment;
+      if (current < target) {
+        counter.textContent = target % 1 === 0 
+          ? Math.floor(current) 
+          : current.toFixed(1);
+        requestAnimationFrame(updateCounter);
+      } else {
+        counter.textContent = target % 1 === 0 ? target : target.toFixed(1);
+        // Add suffix for specific stats
+        if (counter.dataset.count === "4.9") counter.textContent += '/5';
+        if (counter.dataset.count === "100") counter.textContent += '%';
+        if (counter.dataset.count === "24") counter.textContent += 's';
+        if (counter.dataset.count === "14") counter.textContent += ' gün';
+      }
+    };
+    
+    // Start animation when element is in viewport
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        updateCounter();
+        observer.disconnect();
+      }
+    }, { threshold: 0.5 });
+    
+    observer.observe(counter);
+  });
+}
+
+// Mouse Move Glow Effect for Cards
+function initCardGlowEffect() {
+  const cards = document.querySelectorAll('[data-hover-glow], .testimonial-card');
+  
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+}
+
+// 3D Tilt Effect (Lightweight vanilla JS)
+function initTiltEffect() {
+  const tiltCards = document.querySelectorAll('[data-tilt]');
+  
+  tiltCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      
+      const rotateX = (y - centerY) / 20;
+      const rotateY = (centerX - x) / 20;
+      
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    });
+    
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+    });
+  });
+}
+
+// Initialize on DOM load
+document.addEventListener('DOMContentLoaded', () => {
+  animateCounters();
+  initCardGlowEffect();
+  initTiltEffect();
+});
+
+// Re-initialize after product load (if needed)
+window.initSatisfactionSection = () => {
+  animateCounters();
+  initCardGlowEffect();
+  initTiltEffect();
+};
 
     window.openSatisfactionLightbox = (imageUrl, name) => {
       const existingLightbox = document.querySelector('.lightbox-overlay');
