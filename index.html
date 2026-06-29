@@ -2831,7 +2831,7 @@ window.initSatisfactionSection = () => {
 productsArray.sort((a, b) => {
         const dateA = a.eklenmeTarihi ? a.eklenmeTarihi.toDate() : new Date(0);
         const dateB = b.eklenmeTarihi ? b.eklenmeTarihi.toDate() : new Date(0);
-        return dateA - dateB; // Sadece bu satır değişti
+        return dateB - dateA; // Sadece bu satır değişti
       });
 
       productsArray.forEach((p) => {
