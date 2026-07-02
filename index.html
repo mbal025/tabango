@@ -2233,7 +2233,43 @@ const firebaseConfig = {
     let campaignSettings = { active: false, secondProductPrice: 0, message: "", minOrderCount: 1 };
     window._hasAutoScrolledToForm = false; 
 
-const TikTokPixel = {
+    const FacebookPixel = {
+      track(eventName, params = {}, eventId = null) { 
+        if (typeof fbq === 'function') {
+          if(eventId) fbq('track', eventName, params, { eventID: eventId });
+          else fbq('track', eventName, params);
+        }
+      },
+      trackViewContent(product) { this.track('ViewContent', { content_name: product.isim, content_ids: [product.id], content_type: 'product', value: product.fiyat, currency: 'TRY' }); },
+      trackAddToCart(product, quantity = 1) { this.track('AddToCart', { content_name: product.isim, content_ids: [product.id], content_type: 'product', value: product.fiyat, currency: 'TRY', contents: [{ id: product.id, quantity: quantity, item_price: product.fiyat }] }); },
+      trackInitiateCheckout(cartItems, totalValue) {
+        const contents = cartItems.map((item, index) => {
+          const price = (index > 0 && campaignSettings.active) ? campaignSettings.secondProductPrice : item.fiyat;
+          return { id: item.id, quantity: 1, item_price: price, name: item.isim };
+        });
+        this.track('InitiateCheckout', { content_ids: cartItems.map(item => item.id), contents: contents, content_type: 'product', value: totalValue, currency: 'TRY', num_items: cartItems.length });
+      },
+      trackPurchase(orderId, cartItems, totalValue, customerInfo = {}) {
+        const contents = cartItems.map((item, index) => {
+          const price = (index > 0 && campaignSettings.active) ? campaignSettings.secondProductPrice : item.fiyat;
+          return { id: item.id, quantity: 1, item_price: price, name: item.isim };
+        });
+        const purchaseParams = { content_type: 'product', contents: contents, content_ids: cartItems.map(item => item.id), value: totalValue, currency: 'TRY', num_items: cartItems.length };
+        
+        if (typeof fbq === 'function' && Object.keys(customerInfo).length > 0) {
+           fbq('set', 'userData', {
+             ph: customerInfo.phone,
+             fn: customerInfo.firstName,
+             ln: customerInfo.lastName,
+             ct: customerInfo.city
+           }, FB_PIXEL_ID);
+        }
+
+        this.track('Purchase', purchaseParams, orderId);
+      }
+    };
+
+    const TikTokPixel = {
       track(eventName, params = {}, eventId = null) {
         if (typeof ttq !== 'undefined') {
           const options = eventId ? { event_id: eventId } : {};
@@ -2242,37 +2278,23 @@ const TikTokPixel = {
       },
       identify(customerInfo) {
         if (typeof ttq !== 'undefined' && Object.keys(customerInfo).length > 0) {
-          
-          let formattedPhone = customerInfo.phone || "";
-          formattedPhone = formattedPhone.replace(/[^0-9]/g, '');
-          
-          if (formattedPhone.startsWith('05') && formattedPhone.length === 11) {
-            formattedPhone = '+9' + formattedPhone;
-          } else if (formattedPhone.startsWith('5') && formattedPhone.length === 10) {
-            formattedPhone = '+90' + formattedPhone;
-          } else if (formattedPhone.startsWith('90') && formattedPhone.length === 12) {
-            formattedPhone = '+' + formattedPhone;
-          }
-
           ttq.identify({
-            phone_number: formattedPhone, 
+            phone_number: customerInfo.phone, 
           });
         }
       },
       trackViewContent(product) {
         this.track('ViewContent', {
-          content_id: String(product.id), // Kök dizine eklendi
+          contents: [{ content_id: product.id, content_name: product.isim, price: product.fiyat, quantity: 1 }],
           content_type: 'product',
-          contents: [{ content_id: String(product.id), content_name: product.isim, price: product.fiyat, quantity: 1 }],
           value: product.fiyat,
           currency: 'TRY'
         });
       },
       trackAddToCart(product, quantity = 1) {
         this.track('AddToCart', {
-          content_id: String(product.id), // Kök dizine eklendi
+          contents: [{ content_id: product.id, content_name: product.isim, price: product.fiyat, quantity: quantity }],
           content_type: 'product',
-          contents: [{ content_id: String(product.id), content_name: product.isim, price: product.fiyat, quantity: quantity }],
           value: product.fiyat,
           currency: 'TRY'
         });
@@ -2280,14 +2302,11 @@ const TikTokPixel = {
       trackInitiateCheckout(cartItems, totalValue) {
         const contents = cartItems.map((item, index) => {
           const price = (index > 0 && campaignSettings.active) ? campaignSettings.secondProductPrice : item.fiyat;
-          return { content_id: String(item.id), content_name: item.isim, price: price, quantity: 1 };
+          return { content_id: item.id, content_name: item.isim, price: price, quantity: 1 };
         });
-        const contentIds = cartItems.map(item => String(item.id)).join(','); // Çoklu ürün ID'leri
-
         this.track('InitiateCheckout', {
-          content_id: contentIds, // Kök dizine eklendi
-          content_type: 'product',
           contents: contents,
+          content_type: 'product',
           value: totalValue,
           currency: 'TRY'
         });
@@ -2297,14 +2316,11 @@ const TikTokPixel = {
         
         const contents = cartItems.map((item, index) => {
           const price = (index > 0 && campaignSettings.active) ? campaignSettings.secondProductPrice : item.fiyat;
-          return { content_id: String(item.id), content_name: item.isim, price: price, quantity: 1 };
+          return { content_id: item.id, content_name: item.isim, price: price, quantity: 1 };
         });
-        const contentIds = cartItems.map(item => String(item.id)).join(','); // Çoklu ürün ID'leri
-        
         const params = {
-          content_id: contentIds, // Kök dizine eklendi
-          content_type: 'product',
           contents: contents,
+          content_type: 'product',
           value: totalValue,
           currency: 'TRY'
         };
