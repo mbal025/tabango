@@ -2208,7 +2208,67 @@ const firebaseConfig = {
     <details><summary class="font-heading">🔄 İade veya değişim var mı?</summary><div class="faq-answer">Ürünlerimizde koşulsuz şartsız 14 gün içerisinde değişim garantisi mevcuttur. Kusurlu ürünlerde birebir iade hakkınız bulunmaktadır.</div></details>
     <details><summary class="font-heading">❓ Ürünler orijinal mi?</summary><div class="faq-answer">Koleksiyonumuzdaki tüm ürünler, global standartlarda üretilmiş 1. sınıf premium ithal ürünlerdir.</div></details>
   </section>
+<!-- YASAL FOOTER & LİNKLER -->
+  <footer>
+    <div class="footer-company-info">
+      <strong>SOLE & CO. - KOZAK Ticaret Limited Şirketi</strong><br>
+      📍 Adres: KOZAK Mah. Atatürk Cad. No:123 Kadıköy / İstanbul<br>
+      📞 Müşteri Destek & WhatsApp: 0850 305 65 42 · ✉️ Destek: info@benimayakkabicim.vercel.app/<br>
+      Vergi Dairesi: Kadıköy · Vergi No: 1164568590 · Mersis No: 31234567890543234001
+    </div>
+    
+    <div class="footer-links">
+      <a onclick="openModal('modal-mesafeli')">Mesafeli Satış Sözleşmesi</a>
+      <a onclick="openModal('modal-iade')">İade ve Değişim Politikası</a>
+      <a onclick="openModal('modal-gizlilik')">Gizlilik ve Çerez Politikası</a>
+      <a onclick="openModal('modal-kvkk')">KVKK Aydınlatma Metni</a>
+    </div>
 
+    <div class="copyright" id="footerText">© 2026 SOLE & CO. Tüm hakları saklıdır.</div>
+  </footer>
+
+  <!-- MODAL PENCERELERİ (SÖZLEŞMELER) -->
+  <div id="modal-mesafeli" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeAllModals()">✕</button>
+      <h3>Mesafeli Satış Sözleşmesi</h3>
+      <p><strong>6502 Sayılı Tüketicinin Korunması Hakkında Kanun gereğince;</strong><br><br>
+      1. SATICI BİLGİLERİ<br>Ünvanı: SOLE & CO. Ticaret<br>Adres: Kozak Mah. Atatürk Cad. No:123 Kadıköy / İstanbul<br>Telefon: 0850 000 00 00<br><br>
+      2. KONU<br>İşbu sözleşmenin konusu, ALICI'nın SATICI'ya ait internet sitesinden elektronik ortamda siparişini yaptığı ürünün satışı ve teslimi ile ilgili yasal hak ve yükümlülüklerin belirlenmesidir.<br><br>
+      3. CAYMA HAKKI<br>Alıcı, ürünü teslim aldığı tarihten itibaren 14 (on dört) gün içinde hiçbir hukuki ve cezai sorumluluk üstlenmeksizin ve hiçbir gerekçe göstermeksizin malı reddederek sözleşmeden cayma hakkına sahiptir. Cayma hakkının kullanılması için bu süre içinde SATICI'ya WhatsApp veya telefon üzerinden bildirimde bulunulması şarttır.</p>
+    </div>
+  </div>
+
+  <div id="modal-iade" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeAllModals()">✕</button>
+      <h3>İade ve Değişim Politikası</h3>
+      <p>Müşteri memnuniyeti bizim için önceliktir. Satın aldığınız ürünlerle ilgili iade veya değişim taleplerinizi aşağıdaki şartlara uygun olarak gerçekleştirebilirsiniz:<br><br>
+      <strong>1. İade Süresi:</strong> Ürün teslim tarihinden itibaren 14 gün içerisinde iade talebinde bulunabilirsiniz.<br>
+      <strong>2. İade Şartları:</strong> İade edilecek ürünün kullanılmamış, etiketi koparılmamış ve orijinal kutusunun zarar görmemiş olması gerekmektedir. Kullanılmış veya hasar görmüş ürünlerin iadesi kabul edilmez.<br>
+      <strong>3. Değişim İşlemleri:</strong> Beden uyuşmazlığı durumunda, ürün elinize ulaştıktan sonraki 14 gün içinde WhatsApp destek hattımız üzerinden değişim talebinde bulunabilirsiniz.<br>
+      <strong>4. Geri Ödeme:</strong> Kapıda ödeme ile aldığınız ürünlerin iadesinde, geri ödemeniz tarafımıza ileteceğiniz banka IBAN numarasına ürün depomuza ulaştıktan sonra 3 iş günü içinde yapılmaktadır.</p>
+    </div>
+  </div>
+
+  <div id="modal-gizlilik" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeAllModals()">✕</button>
+      <h3>Gizlilik ve Çerez Politikası</h3>
+      <p><strong>1. Bilgilerin Korunması:</strong> Müşterilerimizin sitemize sipariş esnasında girdiği isim, telefon, adres ve IP bilgileri 256-bit SSL güvenlik sertifikası ile şifrelenerek korunmaktadır.<br><br>
+      <strong>2. Bilgi Paylaşımı:</strong> Toplanan kişisel veriler, siparişin kargolanması ve teslimatı amacıyla yalnızca ilgili kargo firmasıyla paylaşılır. KESİNLİKLE üçüncü şahıs veya reklam şirketlerine satılmaz/devredilmez.<br><br>
+      <strong>3. Çerezler (Cookies):</strong> Sitemiz, alışveriş deneyiminizi iyileştirmek, sepetinizi hatırlamak ve site trafiğini analiz etmek (Facebook Pixel vb.) amacıyla temel çerezleri kullanır. Sitemizi kullanarak bu çerezlerin kullanımını kabul etmiş sayılırsınız.</p>
+    </div>
+  </div>
+
+  <div id="modal-kvkk" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeAllModals()">✕</button>
+      <h3>KVKK Aydınlatma Metni</h3>
+      <p>6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, veri sorumlusu sıfatıyla şirketimiz tarafından kişisel verileriniz aşağıda açıklandığı çerçevede işlenmektedir:<br><br>
+      Sipariş formunda ilettiğiniz ad-soyad, telefon, adres ve işlem güvenliği için alınan IP adresiniz; sözleşmenin kurulması, malın teslimatı, faturalandırma ve satış sonrası destek hizmetlerinin yürütülmesi amacıyla işlenmektedir. Kanunun 11. maddesi uyarınca veri sorumlusuna başvurarak verilerinizin silinmesini veya düzeltilmesini talep etme hakkına sahipsiniz.</p>
+    </div>
+  </div>
   <footer id="footerText">© 2026 Taban & GO. Tüm hakları saklıdır.</footer>
   
 
@@ -3196,6 +3256,27 @@ productsArray.sort((a, b) => {
     });
 
     initSystem();
+  </script>
+  <!-- MODAL AÇMA KAPAMA FONKSİYONLARI -->
+  <script>
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    function closeAllModals() {
+      document.querySelectorAll('.modal-overlay').forEach(el => {
+        el.style.display = 'none';
+      });
+      document.body.style.overflow = 'auto';
+    }
+    function closeModal(event) {
+      if (event.target.classList.contains('modal-overlay')) {
+        closeAllModals();
+      }
+    }
   </script>
 </body>
 </html>
